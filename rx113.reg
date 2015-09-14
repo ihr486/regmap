@@ -1011,32 +1011,44 @@ NMIFLTC.B
 #module CMT
 @00088000
 CMSTR0.H
+        STR0
+        STR1
 
 #module CMT0
 @00088002
 CMCR.H
+        CKS     [1:0]
+        CMIE    [6]
 CMCNT.H
 CMCOR.H
 
 #module CMT1
 @00088008
 CMCR.H
+        CKS     [1:0]
+        CMIE    [6]
 CMCNT.H
 CMCOR.H
 
 #module CMT
 @00088010
 CMSTR1.H
+        STR2
+        STR3
 
 #module CMT2
 @00088012
 CMCR.H
+        CKS     [1:0]
+        CMIE    [6]
 CMCNT.H
 CMCOR.H
 
 #module CMT3
 @00088018
 CMCR.H
+        CKS     [1:0]
+        CMIE    [6]
 CMCNT.H
 CMCOR.H
 
@@ -1045,25 +1057,51 @@ CMCOR.H
 IWDTRR.B
 @00088032
 IWDTCR.H
+        TOPS    [1:0]
+        CKS     [7:4]
+        RPES    [9:8]
+        RPSS    [13:12]
 IWDTSR.H
+        CNTVAL.R [13:0]
+        UNDFF
+        REFEF
 IWDTRCR.B
+        RSTIRQS [7]
 @00088038
 IWDTCSTPR.B
+        SLCSTP  [7]
 
 #module R12DA
 @00088040
 DADR0.H
 DADR1.H
 DACR.B
+        DAOE0   [6]
+        DAOE1
 DADPR.B
+        DPSEL   [7]
 DAADSCR.B
+        DAADST  [7]
 DAVREFCR.B
+        REF     [2:0]
 
 @00088200
 TMR0/TCR.B
+        CCLR    [4:3]
+        OVIE
+        CMIEA
+        CMIEB
 TMR1/TCR.B
+        CCLR    [4:3]
+        OVIE
+        CMIEA
+        CMIEB
 TMR0/TCSR.B
+        OSA     [1:0]
+        OSB     [3:2]
 TMR1/TCSR.B
+        OSA     [1:0]
+        OSB     [3:2]
 TMR0/TCORA.B
 TMR1/TCORA.B
 TMR0/TCORB.B
@@ -1071,14 +1109,33 @@ TMR1/TCORB.B
 TMR0/TCNT.B
 TMR1/TCNT.B
 TMR0/TCCR.B
+        CKS     [2:0]
+        CSS     [4:3]
+        TMRIS   [7]
 TMR1/TCCR.B
+        CKS     [2:0]
+        CSS     [4:3]
+        TMRIS   [7]
 TMR0/TCSTR.B
+        TCS
 
 @00088210
 TMR2/TCR.B
+        CCLR    [4:3]
+        OVIE
+        CMIEA
+        CMIEB
 TMR3/TCR.B
+        CCLR    [4:3]
+        OVIE
+        CMIEA
+        CMIEB
 TMR2/TCSR.B
+        OSA     [1:0]
+        OSB     [3:2]
 TMR3/TCSR.B
+        OSA     [1:0]
+        OSB     [3:2]
 TMR2/TCORA.B
 TMR3/TCORA.B
 TMR2/TCORB.B
@@ -1086,65 +1143,277 @@ TMR3/TCORB.B
 TMR2/TCNT.B
 TMR3/TCNT.B
 TMR2/TCCR.B
+        CKS     [2:0]
+        CSS     [4:3]
+        TMRIS   [7]
 TMR3/TCCR.B
+        CKS     [2:0]
+        CSS     [4:3]
+        TMRIS   [7]
 TMR2/TCSTR.B
+        TCS
 
 #module CRC
 @00088280
 CRCCR.B
+        GPS     [1:0]
+        LMS
+        DORCLR  [7]
 CRCDIR.B
 CRCDOR.H
 
 #module RIIC0
 @00088300
 ICCR1.B
+        SDAI.R
+        SCLI.R
+        SDAO
+        SCLO
+        SOWP
+        CLO
+        IICRST
+        ICE
 ICCR2.B
+        ST      [1]
+        RS
+        SP
+        TRS     [5]
+        MST
+        BBSY.R
 ICMR1.B
+        BC      [2:0]
+        BCWP
+        CKS     [6:4]
+        MTWP
 ICMR2.B
+        TMOS
+        TMOL
+        TMOH
+        TMWE
+        SDDL    [6:4]
+        DLCS
 ICMR3.B
+        NF      [1:0]
+        ACKBR
+        ACKBT
+        ACKWP
+        RDRFS
+        WAIT
+        SMBS
 ICFER.B
+        TMOE
+        MALE
+        NALE
+        SALE
+        NACKE
+        NFE
+        SCLE
 ICSER.B
+        SAR0E
+        SAR1E
+        SAR2E
+        GCAE
+        DIDE    [5]
+        HOAE    [7]
 ICIER.B
+        TMOIE
+        ALIE
+        STIE
+        SPIE
+        NAKIE
+        RIE
+        TEIE
+        TIE
 ICSR1.B
+        AAS0
+        AAS1
+        AAS2
+        GCA
+        DID     [5]
+        HOA     [7]
 ICSR2.B
+        TMOF
+        AL
+        START
+        STOP
+        NACKF
+        RDRF
+        TEND
+        TDRE.R
 SARL0.B
+        SVA0
+        SVA     [7:1]
+@0008830A
+TMOCNTL.B
 SARU0.B
+        FS
+        SVA     [2:1]
+@0008830B
+TMOCNTU.B
 SARL1.B
+        SVA0
+        SVA     [7:1]
 SARU1.B
+        FS
+        SVA     [2:1]
 SARL2.B
+        SVA0
+        SVA     [7:1]
 SARU2.B
+        FS
+        SVA     [2:1]
 ICBRL.B
+        BRL     [4:0]
 ICBRH.B
+        BRH     [4:0]
 ICDRT.B
 ICDRR.B
 
 #module RSPI0
 @00088380
 SPCR.B
+        SPMS
+        TXMD
+        MODFEN
+        MSTR
+        SPEIE
+        SPTIE
+        SPE
+        SPRIE
 SSLP.B
+        SSL0P
+        SSL1P
+        SSL2P
+        SSL3P
 SPPCR.B
+        SPLP
+        SPLP2
+        MOIFV   [4]
+        MOIFE
 SPSR.B
+        OVRF
+        IDLNF.R
+        MODF
+        PERF
 SPDR.W
 SPSCR.B
-SPSSR.B
+        SPSLN   [2:0]
+SPSSR.BR
+        SPCP    [2:0]
+        SPECM   [6:4]
 SPBR.B
 SPDCR.B
+        SPFC    [1:0]
+        SPRDTD  [4]
+        SPLW
 SPCKD.B
+        SCKDL   [2:0]
 SSLND.B
+        SLNDL   [2:0]
 SPND.B
+        SPNDL   [2:0]
 SPCR2.B
-SPCMD0.B
-SPCMD1.B
-SPCMD2.B
-SPCMD3.B
-SPCMD4.B
-SPCMD5.B
-SPCMD6.B
-SPCMD7.B
+        SPPE
+        SPOE
+        SPIIE
+        PTE
+@00088390
+SPCMD0.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD1.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD2.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD3.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD4.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD5.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD6.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
+SPCMD7.H
+        CPHA
+        CPOL
+        BRDV    [3:2]
+        SSLA    [6:4]
+        SSLKP
+        SPB     [11:8]
+        LSBF
+        SPNDEN
+        SLNDEN
+        SCKDEN
 
 #module IRDA
 @00088410
 IRCR.B
+        IRRXINV [2]
+        IRTXINV
+        IRCKS   [6:4]
+        IRE
 
 #module MTU
 @00088600
@@ -1157,18 +1426,70 @@ MTU4/TCR.B
         CKEG    [4:3]
         CCLR    [7:5]
 MTU3/TMDR.B
+        MD      [3:0]
+        BFA
+        BFB
 MTU4/TMDR.B
+        MD      [3:0]
+        BFA
+        BFB
 MTU3/TIORH.B
+        IOA     [3:0]
+        IOB     [7:4]
 MTU3/TIORL.B
+        IOC     [3:0]
+        IOD     [7:4]
 MTU4/TIORH.B
+        IOA     [3:0]
+        IOB     [7:4]
 MTU4/TIORL.B
+        IOC     [3:0]
+        IOD     [7:4]
 MTU3/TIER.B
+        TGIEA
+        TGIEB
+        TGIEC
+        TGIED
+        TCIEV
+        TTGE    [7]
 MTU4/TIER.B
+        TGIEA
+        TGIEB
+        TGIEC
+        TGIED
+        TCIEV
+        TTGE2   [6]
+        TTGE
 MTU/TOER.B
+        OE3B
+        OE4A
+        OE4B
+        OE3D
+        OE4C
+        OE4D
 @0008860D
 MTU/TGCR.B
+        UF
+        VF
+        WF
+        FB
+        P
+        N
+        BDC
 MTU/TOCR1.B
+        OLSP
+        OLSN
+        TOCS
+        TOCL
+        PSYE
 MTU/TOCR2.B
+        OLS1P
+        OLS1N
+        OLS2P
+        OLS2N
+        OLS3P
+        OLS3N
+        BF      [7:6]
 MTU3/TCNT.H
 MTU4/TCNT.H
 MTU/TCDR.H
@@ -1184,20 +1505,49 @@ MTU3/TGRD.H
 MTU4/TGRC.H
 MTU4/TGRD.H
 MTU3/TSR.B
+        TCFD    [7]
 MTU4/TSR.B
+        TCFD    [7]
 @00088630
 MTU/TITCR.B
+        T4VCOR  [2:0]
+        T4VEN
+        T3ACOR  [6:4]
+        T3AEN
 MTU/TITCNT.B
+        T4VCNT  [2:0]
+        T3ACNT  [6:4]
 MTU/TBTER.B
+        BTE     [1:0]
 @00088634
 MTU/TDER.B
+        TDER
 @00088636
 MTU/TOLBR.B
+        OLS1P
+        OLS1N
+        OLS2P
+        OLS2N
+        OLS3P
+        OLS3N
 @00088638
 MTU3/TBTM.B
+        TTSA
+        TTSB
 MTU4/TBTM.B
+        TTSA
+        TTSB
 @00088640
 MTU4/TADCR.H
+        ITB4VE
+        ITB3AE
+        ITA4VE
+        ITA3AE
+        DT4BE
+        UT4BE
+        DT4AE
+        UT4AE
+        BF      [15:14]
 @00088644
 MTU4/TADCORA.H
 MTU4/TADCORB.H
@@ -1205,18 +1555,56 @@ MTU4/TADCOBRA.H
 MTU4/TADCOBRB.H
 @00088660
 MTU/TWCR.B
+        WRE
+        CCE     [7]
 @00088680
 MTU/TSTR.B
+        CST0
+        CST1
+        CST2
+        CST3    [6]
+        CST4
 MTU/TSYR.B
+        SYNC0
+        SYNC1
+        SYNC2
+        SYNC3   [6]
+        SYNC4
 @00088684
 MTU/TRWER.B
+        RWE
 @00088690
 MTU0/NFCR.B
+        NFAEN
+        NFBEN
+        NFCEN
+        NFDEN
+        NFCS    [5:4]
 MTU1/NFCR.B
+        NFAEN
+        NFBEN
+        NFCS    [5:4]
 MTU2/NFCR.B
+        NFAEN
+        NFBEN
+        NFCS    [5:4]
 MTU3/NFCR.B
+        NFAEN
+        NFBEN
+        NFCEN
+        NFDEN
+        NFCS    [5:4]
 MTU4/NFCR.B
+        NFAEN
+        NFBEN
+        NFCEN
+        NFDEN
+        NFCS    [5:4]
 MTU5/NFCR.B
+        NFUEN
+        NFVEN
+        NFWEN
+        NFCS    [5:4]
 
 #module MTU0
 @00088700
@@ -1228,6 +1616,7 @@ TMDR.B
         MD      [3:0]
         BFA
         BFB
+        BFE
 TIORH.B
         IOA     [3:0]
         IOB     [7:4]
@@ -1240,10 +1629,9 @@ TIER.B
         TGIEC
         TGIED
         TCIEV
-        TCIEU
-        TTGE2
-        TTGE
+        TTGE    [7]
 TSR.B
+        TCFD    [7]
 TCNT.H
 TGRA.H
 TGRB.H
@@ -1252,8 +1640,13 @@ TGRD.H
 TGRE.H
 TGRF.H
 TIER2.B
+        TGIEE
+        TGIEF
 @00088726
 TBTM.B
+        TTSA
+        TTSB
+        TTSE
 
 #module MTU1
 @00088780
@@ -1262,15 +1655,28 @@ TCR.B
         CKEG    [4:3]
         CCLR    [7:5]
 TMDR.B
+        MD      [3:0]
 TIOR.B
+        IOA     [3:0]
+        IOB     [7:4]
 @00088784
 TIER.B
+        TGIEA
+        TGIEB
+        TCIEV   [4]
+        TCIEU
+        TTGE    [7]
 TSR.B
+        TCFD    [7]
 TCNT.H
 TGRA.H
 TGRB.H
 @00088790
 TICCR.B
+        I1AE
+        I1BE
+        I2AE
+        I2BE
 
 #module MTU2
 @00088800
@@ -1279,10 +1685,19 @@ TCR.B
         CKEG    [4:3]
         CCLR    [7:5]
 TMDR.B
+        MD      [3:0]
 TIOR.B
+        IOA     [3:0]
+        IOB     [7:4]
 @00088804
 TIER.B
+        TGIEA
+        TGIEB
+        TCIEV   [4]
+        TCIEU
+        TTGE    [7]
 TSR.B
+        TCFD    [7]
 TCNT.H
 TGRA.H
 TGRB.H
@@ -1297,6 +1712,7 @@ TCRU.B
         CCLR    [7:5]
 @00088886
 TIORU.B
+        IOC     [4:0]
 @00088890
 TCNTV.H
 TGRV.H
@@ -1306,6 +1722,7 @@ TCRV.B
         CCLR    [7:5]
 @00088896
 TIORV.B
+        IOC     [4:0]
 @000888A0
 TCNTW.H
 TGRW.H
@@ -1315,10 +1732,17 @@ TCRW.B
         CCLR    [7:5]
 @000888A6
 TIORW.B
+        IOC     [4:0]
 @000888B2
 TIER.B
+        TGIE5W
+        TGIE5V
+        TGIE5U
 @000888B4
 TSTR.B
+        CSTW5
+        CSTV5
+        CSTU5
 @000888B6
 TCNTCMPCLR.B
         CMPCLR5W
@@ -1328,30 +1752,79 @@ TCNTCMPCLR.B
 #module POE
 @00088900
 ICSR1.H
+        POE0M   [1:0]
+        POE1M   [3:2]
+        POE2M   [5:4]
+        POE3M   [7:6]
+        PIE1
+        POE0F   [12]
+        POE1F
+        POE2F
+        POE3F
 OCSR1.H
+        OIE1    [8]
+        OCE1
+        OSF1    [15]
 @00088908
 ICSR2.H
+        POE8M   [1:0]
+        PIE2    [8]
+        POE8E
+        POE8F   [12]
 SPOER.B
+        CH34HIZ
+        CH0HIZ
 POECR1.B
+        PE0ZE
+        PE1ZE
+        PE2ZE
+        PE3ZE
 POECR2.B
+        P3CZEA  [4]
+        P2CZEA
+        P1CZEA
 @0008890E
 ICSR3.H
+        OSTSTE  [9]
+        OSTSTF  [12]
 
 #module S12AD
 @00089000
 ADCSR.H
+        DBLANS  [4:0]
+        GBADIE  [6]
+        DBLE
+        EXTRG
+        TRGE
+        ADHSC
+        ADIE    [12]
+        ADCS    [14:13]
+        ADST
 @00089004
 ADANSA.H
+        ANSA    [15:0]
 ADANSA1.H
+        ANSA1   [5]
 ADADS.H
+        ADS     [15:0]
 ADADS1.H
+        ADS1    [5]
 ADADC.B
+        ADC     [1:0]
 @0008900E
 ADCER.H
 ADSTRGR.H
+        TRSB    [3:0]
+        TRSA    [11:8]
 ADEXICR.H
+        TSSAD
+        OCSAD
+        TSS     [8]
+        OCS
 ADANSB.H
+        ANSB    [15:0]
 ADANSB1.H
+        ANSB1   [5]
 ADDBLDR.H
 ADTSDR.H
 ADOCDR.H
@@ -1376,152 +1849,581 @@ ADDR15.H
 ADDR21.H
 @00089060
 ADSSTR0.B
+        SST     [7:0]
 ADSSTRL.B
+        SST     [7:0]
 @00089070
 ADSSTRT.B
+        SST     [7:0]
 ADSSTRO.B
+        SST     [7:0]
 @00089073
 ADSSTR1.B
+        SST     [7:0]
 ADSSTR2.B
+        SST     [7:0]
 ADSSTR3.B
+        SST     [7:0]
 ADSSTR4.B
+        SST     [7:0]
 ADSSTR5.B
+        SST     [7:0]
 ADSSTR6.B
+        SST     [7:0]
 ADSSTR7.B
+        SST     [7:0]
 @0008907C
 ADHVREFCNT.B
+        HVREFDIS
+        OCSVSEL
 @00089080
 ADSSTR21.B
+        SST     [7:0]
 
 #module SCI0
 @0008A000
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI1
 @0008A020
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI2
 @0008A040
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI5
 @0008A0A0
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI6
 @0008A0C0
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI8
 @0008A100
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SCI9
 @0008A120
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 
 #module SSI0
 @0008A500
 SSICR.W
+        REN
+        TEN
+        MUEN    [3]
+        CKDV    [7:4]
+        DEL
+        PDTA
+        SDTA
+        SPDP
+        SWSP
+        SCKP
+        SWSD
+        SCKD
+        SWL     [18:16]
+        DWL     [21:19]
+        CHNL    [23:22]
+        IIEN    [25]
+        ROIEN
+        RUIEN
+        TOIEN
+        TUIEN
+        CKS
 SSISR.W
+        IDST.R
+        RSWNO.R
+        RCHNO.R [3:2]
+        TSWNO.R
+        TCHNO.R [6:5]
+        IIRQ.R  [25]
+        ROIRQ
+        RUIRQ
+        TOIRQ
+        TUIRQ
 @0008A510
 SSIFCR.W
+        RFRST
+        TFRST
+        RIE
+        TIE
+        RTRG    [5:4]
+        TTRG    [7:6]
+        SSIRST  [16]
+        AUCKE   [31]
 SSIFSR.W
+        RDF
+        RDC.R   [11:8]
+        TDE     [16]
+        TDC.R   [27:24]
 SSIFTDR.W
 SSIFRDR.W
 SSITDMR.W
+        CONT    [8]
 
 #module CAC
 @0008B000
@@ -1556,6 +2458,11 @@ CACNTBR.H
 #module DOC
 @0008B080
 DOCR.B
+        OMS     [1:0]
+        DCSEL
+        DOPCIE  [4]
+        DOPCF.R
+        DOPCFCL
 @0008B082
 DODIR.H
 DODSR.H
@@ -1657,38 +2564,145 @@ ELSEGR.B
 #module SCI12
 @0008B300
 SMR.B
+        CKS     [1:0]
+        MP
+        STOP
+        PM
+        PE
+        CHR
+        CM
+&
+        BCP     [3:2]
+        BLK     [6]
+        GM
 BRR.B
 SCR.B
+        CKE     [1:0]
+        TEIE
+        MPIE
+        RE
+        TE
+        RIE
+        TIE
 TDR.B
 SSR.B
+        MPBT
+        MPB.R
+        TEND.R
+        PER
+        FER
+        ORER
+&
+        ERS     [4]
 RDR.B
 SCMR.B
+        SMIF
+        SINV    [2]
+        SDIR
+        BCP2    [7]
 SEMR.B
+        ACS0
+        ABCS    [4]
+        NFEN
+        RXDESEL [7]
 SNFR.B
+        NFCS    [2:0]
 SIMR1.B
+        IICM
+        IICDL   [7:3]
 SIMR2.B
+        IICINTM
+        IICCSC
+        IICACKT [5]
 SIMR3.B
+        IICSTAREQ
+        IICRSTAREQ
+        IICSTPREQ
+        IICSTIF
+        IICSDAS [5:4]
+        IICSCLS [7:6]
 SISR.B
+        IICACKR
 SPMR.B
+        SSE
+        CTSE
+        MSS
+        MFF     [4]
+        CKPOL   [6]
+        CKPH
 @0008B320
 ESMER.B
+        ESME
 CR0.B
+        SFSF.R   [1]
+        RXDSF.R
+        BRME
 CR1.B
+        BFE
+        CF0RE
+        CF1DS   [3:2]
+        PIBE
+        PIBS    [7:5]
 CR2.B
+        DFCS    [2:0]
+        BCCS    [5:4]
+        RTS     [7:6]
 CR3.B
+        SDST
 PCR.B
+        TXDXPS
+        RXDXPS
+        SHARPS  [4]
 ICR.B
-STR.B
+        BFDIE
+        CF0MIE
+        CF1MIE
+        PIBDIE
+        BCDIE
+        AEDIE
+STR.BR
+        BFDF
+        CF0MF
+        CF1MF
+        PIBDF
+        BCDF
+        AEDF
 STCR.B
+        BFDCL
+        CF0MCL
+        CF1MCL
+        PIBDCL
+        BCDCL
+        AEDCL
 CF0DR.B
 CF0CR.B
+        CF0CE0
+        CF0CE1
+        CF0CE2
+        CF0CE3
+        CF0CE4
+        CF0CE5
+        CF0CE6
+        CF0CE7
 CF0RR.B
 PCF1DR.B
 SCF1DR.B
 CF1CR.B
+        CF1CE0
+        CF1CE1
+        CF1CE2
+        CF1CE3
+        CF1CE4
+        CF1CE5
+        CF1CE6
+        CF1CE7
 CF1RR.B
 TCR.B
+        TCST
 TMR.B
+        TOMS    [1:0]
+        TWRC    [3]
+        TCSS    [6:4]
 TPRE.B
 TCNT.B
 
@@ -2535,143 +3549,562 @@ LVD2CR0.B
 
 #module RTC
 @0008C400
-R64CNT.B
+R64CNT.BR
+        F64HZ
+        F32HZ
+        F16HZ
+        F8HZ
+        F4HZ
+        F2HZ
+        F1HZ
 @0008C402
 RSECCNT.B
+        SEC1    [3:0]
+        SEC10   [6:4]
+@0008C402
+BCNT0.B
+        BCNT    [7:0]
 @0008C404
 RMINCNT.B
+        MIN1    [3:0]
+        MIN10   [6:4]
+@0008C404
+BCNT1.B
+        BCNT    [7:0]
 @0008C406
 RHRCNT.B
+        HR1     [3:0]
+        HR10    [5:4]
+        PM
+@0008C406
+BCNT2.B
+        BCNT    [7:0]
 @0008C408
 RWKCNT.B
+        DAYW    [2:0]
+@0008C408
+        BCNT    [7:0]
 @0008C40A
 RDAYCNT.B
+        DATE1   [3:0]
+        DATE10  [5:4]
 @0008C40C
 RMONCNT.B
+        MON1    [3:0]
+        MON10
 @0008C40E
 RYRCNT.H
-RSECAR.B
+        YR1     [3:0]
+        YR10    [7:4]
+RSECAR.H
+        SEC1    [3:0]
+        SEC10   [6:4]
+        ENB
+@0008C410
+BCNT0AR.B
+        BCNTAR  [7:0]
 @0008C412
 RMINAR.B
+        MIN1    [3:0]
+        MIN10   [6:4]
+        ENB
+@0008C412
+BCNT1AR.B
+        BCNTAR  [7:0]
 @0008C414
 RHRAR.B
+        HR1     [3:0]
+        HR10    [5:4]
+        PM
+        ENB
+@0008C414
+BCNT2AR.B
+        BCNTAR  [7:0]
 @0008C416
 RWKAR.B
+        DAYW    [2:0]
+        ENB     [7]
+@0008C416
+BCNT3AR.B
+        BCNTAR  [7:0]
 @0008C418
 RDAYAR.B
+        DATE1   [3:0]
+        DATE10  [5:4]
+        ENB     [7]
+@0008C418
+BCNT0AER.B
+        ENB     [7:0]
 @0008C41A
 RMONAR.B
+        MON1    [3:0]
+        MON10
+        ENB     [7]
+@0008C41A
+BCNT1AER.B
+        ENB     [7:0]
 @0008C41C
 RYRAR.H
+        YR1     [3:0]
+        YR10    [7:4]
+@0008C41C
+BCNT2AER.H
+        ENB     [7:0]
 @0008C41E
 RYRAREN.B
+        ENB     [7]
+@0008C41E
+BCNT3AER.B
+        ENB     [7:0]
 @0008C422
 RCR1.B
+        AIE
+        CIE
+        PIE
+        RTCOS
+        PES     [7:4]
 @0008C424
 RCR2.B
+        START
+        RESET
+        ADJ30
+        RTCOE
+        AADJE
+        AADJP
+        HR24
+        CNTMD
 @0008C426
 RCR3.B
+        RTCEN
+        RTCDV   [3:1]
 @0008C42E
 RADJ.B
+        ADJ     [5:0]
+        PMADJ   [7:6]
 
 #module CMPB
 @0008C580
 CPBCNT1.B
+        CPB0INI
+        CPB1INI [4]
 CPBCNT2.B
-CPBFLG.B
+        CPB0WCP
+        CPB1WCP [4]
+CPBFLG.BR
+        CPB0OUT [3]
+        CPB1OUT [7]
 CPBINT.B
+        CPB0INTEN
+        CPB0INTEG
+        CPB0INTPL
+        CPB1INTEN [4]
+        CPB1INTEG
+        CPB1INTPL
 CPBF.B
+        CPB0FEN
+        CPB0F   [3:2]
+        CPB1FEN
+        CPB1F   [7:6]
 CPBMD.B
+        CPBSPDMD
 CPBREF.B
+        CPB0VRF
+        CPB1VRF [4]
 CPBOCR.B
+        CPB0OE
+        CPB0OP
+        CPB1OE  [4]
+        CPB1OP
 
 #module USB0
 @000A0000
 SYSCFG.H
+        USBE
+        DMRPU   [3]
+        DPRPU
+        DRPD
+        DCFM
+        CNEN    [8]
+        SCKE    [10]
 @000A0004
-SYSSTS0.H
+SYSSTS0.HR
+        LNST    [1:0]
+        IDMON
+        HTACT   [6]
+        OVCMON  [15:14]
 @000A0008
 DVSTCTR0.H
+        RHST    [2:0]
+        UACT    [4]
+        RESUME
+        USBRST
+        RWUPE
+        WKUP
+        VBUSEN
+        EXICEN
+        HNPBTOA
 @000A0014
-CFIFO.H
+CFIFO.HB
+        L       [7:0]
 @000A0018
-D0FIFO.H
+D0FIFO.HB
+        L       [7:0]
 @000A001C
-D1FIFO.H
+D1FIFO.HB
+        L       [7:0]
 @000A0020
 CFIFOSEL.H
+        CURPIPE [3:0]
+        ISEL    [5]
+        BIGEND  [8]
+        MBW     [10]
+        REW     [14]
+        RCNT
 CFIFOCTR.H
+        DTLN.R  [8:0]
+        FRDY.R  [13]
+        BCLR
+        BVAL
 @000A0028
 D0FIFOSEL.H
+        CURPIPE [3:0]
+        BIGEND  [8]
+        MBW     [10]
+        DREQE   [12]
+        DCLRM
+        REW
+        RCNT
 D0FIFOCTR.H
+        DTLN.R  [8:0]
+        FRDY.R  [13]
+        BCLR
+        BVAL
 D1FIFOSEL.H
+        CURPIPE [3:0]
+        BIGEND  [8]
+        MBW     [10]
+        DREQE   [12]
+        DCLRM
+        REW
+        RCNT
 D1FIFOCTR.H
+        DTLN.R  [8:0]
+        FRDY.R  [13]
+        BCLR
+        BVAL
 INTENB0.H
+        BRDYE   [8]
+        NRDYE
+        BEMPE
+        CTRE
+        DVSE
+        SOFE
+        RSME
+        VBSE
 INTENB1.H
+        PDDETINTE0
+        SACKE   [4]
+        SIGNE
+        EOFERRE
+        ATTCHE  [11]
+        DTCHE
+        BCHGE   [14]
+        OVRCRE
 @000A0036
 BRDYENB.H
+        PIPE0BRDYE
+        PIPE1BRDYE
+        PIPE2BRDYE
+        PIPE3BRDYE
+        PIPE4BRDYE
+        PIPE5BRDYE
+        PIPE6BRDYE
+        PIPE7BRDYE
+        PIPE8BRDYE
+        PIPE9BRDYE
 NRDYENB.H
+        PIPE0NRDYE
+        PIPE1NRDYE
+        PIPE2NRDYE
+        PIPE3NRDYE
+        PIPE4NRDYE
+        PIPE5NRDYE
+        PIPE6NRDYE
+        PIPE7NRDYE
+        PIPE8NRDYE
+        PIPE9NRDYE
 BEMPENB.H
+        PIPE0BEMPE
+        PIPE1BEMPE
+        PIPE2BEMPE
+        PIPE3BEMPE
+        PIPE4BEMPE
+        PIPE5BEMPE
+        PIPE6BEMPE
+        PIPE7BEMPE
+        PIPE8BEMPE
+        PIPE9BEMPE
 SOFCFG.H
+        EDGESTS.R [4]
+        BRDYM   [6]
+        TRNENSEL [8]
 @000A0040
 INTSTS0.H
+        CTSQ.R  [2:0]
+        VALID
+        DVSQ.R  [6:4]
+        VBSTS.R
+        BRDY.R
+        NRDY.R
+        BEMP.R
+        CTRT
+        DVST
+        SOFR
+        RESM
+        VBINT
 INTSTS1.H
+        PDDETINT0
+        SACK    [4]
+        SIGN
+        EOFERR
+        ATTCH   [11]
+        DTCH
+        BCHG    [14]
+        OVRCR
 @000A0046
 BRDYSTS.H
+        PIPE0BRDY
+        PIPE1BRDY
+        PIPE2BRDY
+        PIPE3BRDY
+        PIPE4BRDY
+        PIPE5BRDY
+        PIPE6BRDY
+        PIPE7BRDY
+        PIPE8BRDY
+        PIPE9BRDY
 NRDYSTS.H
+        PIPE0NRDY
+        PIPE1NRDY
+        PIPE2NRDY
+        PIPE3NRDY
+        PIPE4NRDY
+        PIPE5NRDY
+        PIPE6NRDY
+        PIPE7NRDY
+        PIPE8NRDY
+        PIPE9NRDY
 BEMPSTS.H
+        PIPE0BEMP
+        PIPE1BEMP
+        PIPE2BEMP
+        PIPE3BEMP
+        PIPE4BEMP
+        PIPE5BEMP
+        PIPE6BEMP
+        PIPE7BEMP
+        PIPE8BEMP
+        PIPE9BEMP
 FRMNUM.H
+        FRNM.R  [10:0]
+        CRCE    [14]
+        OVRN
 @000A0054
 USBREQ.H
+        BMREQUESTTYPE [7:0]
+        BREQUEST [15:8]
 USBVAL.H
+        WVALUE  [15:0]
 USBINDX.H
+        WINDEX  [15:0]
 USBLENG.H
+        WLENGTH [15:0]
 DCPCFG.H
+        DIR     [4]
+        SHTNAK  [7]
 DCPMAXP.H
+        MXPS    [6:0]
+        DEVSEL  [15:12]
 DCPCTR.H
+        PID     [1:0]
+        CCPL
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        SUREQCLR [11]
+        SUREQ   [14]
+        BSTS.R
 @000A0064
 PIPESEL.H
+        PIPESEL [3:0]
 PIPECFG.H
+        EPNUM   [3:0]
+        DIR
+        SHTNAK  [7]
+        DBLB    [9]
+        BFRE
+        TYPE    [15:14]
 PIPEMAXP.H
+        MXPS    [8:0]
+        DEVSEL  [15:12]
 PIPEPERI.H
+        IITV    [2:0]
+        IFIS    [12]
 PIPE1CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        ATREPM
+        INBUFM.R [14]
+        BSTS.R
 PIPE2CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        ATREPM
+        INBUFM.R [14]
+        BSTS.R
 PIPE3CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        ATREPM
+        INBUFM.R [14]
+        BSTS.R
 PIPE4CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        ATREPM
+        INBUFM.R [14]
+        BSTS.R
 PIPE5CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        ATREPM
+        INBUFM.R [14]
+        BSTS.R
 PIPE6CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        BSTS.R  [15]
 PIPE7CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        BSTS.R  [15]
 PIPE8CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        BSTS.R  [15]
 PIPE9CTR.H
+        PID     [1:0]
+        PBUSY.R [5]
+        SQMON.R
+        SQSET
+        SQCLR
+        ACLRM
+        BSTS.R  [15]
 @000A0090
 PIPE1TRE.H
+        TRCLR   [8]
+        TRENB
 PIPE1TRN.H
+        TRNCNT  [15:0]
 PIPE2TRE.H
+        TRCLR   [8]
+        TRENB
 PIPE2TRN.H
+        TRNCNT  [15:0]
 PIPE3TRE.H
+        TRCLR   [8]
+        TRENB
 PIPE3TRN.H
+        TRNCNT  [15:0]
 PIPE4TRE.H
+        TRCLR   [8]
+        TRENB
 PIPE4TRN.H
+        TRNCNT  [15:0]
 PIPE5TRE.H
+        TRCLR   [8]
+        TRENB
 PIPE5TRN.H
+        TRNCNT  [15:0]
 @000A00B0
 USBBCCTRL0.H
+        RPDME0
+        IDPSRCE0
+        IDMSINKE0
+        VDPSRCE0
+        IDPSINKE0
+        VDMSRCE0
+        BATCHGE0 [7]
+        CHGDETSTS0.R
+        PDDETSTS0.R
 @000A00CC
 USBMC.H
+        VDDUSBE
 @000A00D0
 DEVADD0.H
+        USBSPD  [7:6]
 DEVADD1.H
+        USBSPD  [7:6]
 DEVADD2.H
+        USBSPD  [7:6]
 DEVADD3.H
+        USBSPD  [7:6]
 DEVADD4.H
+        USBSPD  [7:6]
 DEVADD5.H
+        USBSPD  [7:6]
 
 #module LCDC
 @000A0800
 LCDM0.B
+        LBAS    [1:0]
+        LDTY    [4:2]
+        LWAVE
+        MDSET   [7:6]
 LCDM1.B
+        LCDVLM
+        LCDSEL  [3]
+        BLOON
+        VLCON
+        SCOC
+        LCDON
 LCDC0.B
+        LCDC0   [5:0]
 VLCD.B
+        VLCD    [4:0]
 @000A0840
 SEG00.B
 SEG01.B
@@ -2717,28 +4150,65 @@ SEG39.B
 #module CTSU
 @000A0900
 CTSUCR0.B
+        CTSUSTRT
+        CTSUCAP
+        CTSUNZ
+        CTSUINIT [4]
 CTSUCR1.B
+        CTSUPON
+        CTSUCSW
+        CTSUATUNE0
+        CTSUATUNE1
+        CTSUCLK [5:4]
+        CTSUMD  [7:6]
 CTSUSDPRS.B
+        CTSUPRRATIO [3:0]
+        CTSUPRMODE [5:4]
+        CTSUSOFF
 CTSUSST.B
+        CTSUSST [7:0]
 CTSUMCH0.B
-CTSUMCH1.B
+        CTSUMCH0 [3:0]
+CTSUMCH1.BR
+        CTSUMCH1 [3:0]
 CTSUCHAC0.B
+        CTSUCHAC0 [7:0]
 CTSUCHAC1.B
+        CTSUCHAC1 [3:0]
 @000A090B
 CTSUCHTRC0.B
+        CTSUCHTRC0 [7:0]
 CTSUCHTRC1.B
+        CTSUCHTRC1 [3:0]
 @000A0910
 CTSUDCLKC.B
+        CTSUSSMOD [1:0]
+        CTSUSSCNT [5:4]
 CTSUST.B
+        CTSUSTC.R [2:0]
+        CTSUDTSR.R [4]
+        CTSUSOVF
+        CTSUROVF
+        CTSUPS.R
 CTSUSSC.H
+        CTSUSSDIV [11:8]
 CTSUSO0.H
+        CTSUSO  [9:0]
+        CTSUSNUM [15:10]
 CTSUSO1.H
+        CTSURICOA [7:0]
+        CTSUSDPA [12:8]
+        CTSUICOG [14:13]
 CTSUSC.H
+        CTSUSC  [15:0]
 CTSURC.H
-CTSUERRS.H
+        CTSURC  [15:0]
+CTSUERRS.HR
+        CTSUICOMP [15]
 
 @007FC090
 FLASH/DFLCTL.B
+        DFLEN
 
 #module TEMPS
 @007FC0AC
@@ -2747,30 +4217,58 @@ TSCDRH.B
 
 #module FLASH
 @007FC0B0
-FSCMR.H
+FSCMR.HR
+        SASMF   [8]
 FAWSMR.H
 FAWEMR.H
 FISR.B
+        PCKA    [4:0]
+        SAS     [7:6]
 FEXCR.B
+        CMD     [2:0]
+        OPST    [7]
 FEAML.H
 FEAMH.B
 @007FC0C0
 FPR.B
 FPSR.B
+        PERR.R
 FRBL.H
 FRBH.H
 @007FFF80
 FPMCR.B
+        FMS0    [1]
+        RPDIS   [3]
+        FMS1
+        LVPE    [6]
+        FMS2
 FASR.B
+        EXS
 FSARL.H
 FSARH.B
 FCR.B
+        CMD     [3:0]
+        DRC
+        STOP    [6]
+        OPST
 FEARL.H
 FEARH.B
 FRESETR.B
-FSTATR0.B
-FSTATR1.B
+        FRESET
+FSTATR0.BR
+        ERERR
+        PRGERR
+        BCERR   [3]
+        ILGLERR
+        EILGERR
+FSTATR1.BR
+        DRRDY   [1]
+        FRDY    [6]
+        EXRDY
 FWBL.H
 FWBH.H
 @007FFFB2
 FENTRYR.H
+        FENTRY0
+        FENTRYD [7]
+        FEKEY   [15:8]

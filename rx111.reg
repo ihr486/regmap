@@ -935,7 +935,7 @@ SPPCR.B
         SPLP
         SPLP2
         MOIFV   [4]
-        MOIFE   [5]
+        MOIFE
 SPSR.B
         OVRF
         IDLNF.R
@@ -1607,7 +1607,7 @@ SISR.B
 SPMR.B
         SSE
         CTSE
-        MISS
+        MSS
         MFF     [4]
         CKPOL   [6]
         CKPH
@@ -3036,7 +3036,7 @@ FRBL.H
 FRBH.H
 @007FFF80
 FPMCR.B
-        FMA0    [1]
+        FMS0    [1]
         RPDIS   [3]
         FMS1
         LVPE    [6]
