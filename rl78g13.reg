@@ -1,0 +1,2035 @@
+@F0010
+ADM2.B
+        ADTYP
+        AWC     [2]
+        ADRCK
+        ADREFM  [5]
+        ADREF   [7:6]
+ADUL.B
+        ADUL	[7:0]
+ADLL.B
+        ADLL	[7:0]
+ADTES.B
+        ADTES   [1:0]
+@F0030
+PU0.B
+        PU00
+        PU01
+        PU02
+        PU03
+        PU04
+        PU05
+        PU06
+        PU07
+PU1.B
+        PU10
+        PU11
+        PU12
+        PU13
+        PU14
+        PU15
+        PU16
+        PU17
+@F0033
+PU3.B
+        PU30
+        PU31
+        PU32
+        PU33
+        PU34
+        PU35
+        PU36
+        PU37
+PU4.B
+        PU40
+        PU41
+        PU42
+        PU43
+        PU44
+        PU45
+        PU46
+        PU47
+PU5.B
+        PU50
+        PU51
+        PU52
+        PU53
+        PU54
+        PU55
+        PU56
+        PU57
+PU6.B
+        PU64    [4]
+        PU65
+        PU66
+        PU67
+PU7.B
+        PU70
+        PU71
+        PU72
+        PU73
+        PU74
+        PU75
+        PU76
+        PU77
+PU8.B
+        PU80
+        PU81
+        PU82
+        PU83
+        PU84
+        PU85
+        PU86
+        PU87
+PU9.B
+        PU90
+        PU91
+        PU92
+        PU93
+        PU94
+        PU95
+        PU96
+        PU97
+PU10.B
+        PU100
+        PU101
+        PU102
+        PU103
+        PU104
+        PU105
+        PU106
+PU11.B
+        PU110
+        PU111
+        PU112
+        PU113
+        PU114
+        PU115
+        PU116
+        PU117
+PU12.B
+        PU120
+        PU125   [5]
+        PU126
+        PU127
+@F003E
+PU14.B
+        PU140
+        PU141
+        PU142
+        PU143
+        PU144
+        PU145
+        PU146
+        PU147
+@F0040
+PIM0.B
+        PIM01   [1]
+        PIM03   [3]
+        PIM04
+PIM1.B
+        PIM10
+        PIM11
+        PIM13   [3]
+        PIM14
+        PIM15
+        PIM16
+        PIM17
+@F0044
+PIM4.B
+        PIM43   [3]
+        PIM44
+PIM5.B
+        PIM53   [3]
+        PIM54
+        PIM55
+@F0048
+PIM8.B
+        PIM80
+        PIM81
+@F004E
+PIM14.B
+        PIM142  [2]
+        PIM143
+@F0050
+POM0.B
+        POM00
+        POM02   [2]
+        POM03
+        POM04
+POM1.B
+        POM10
+        POM11
+        POM12
+        POM13
+        POM14
+        POM15
+        POM17   [7]
+@F0054
+POM4.B
+        POM43   [3]
+        POM44
+        POM45
+POM5.B
+        POM50
+        POM52   [2]
+        POM53
+        POM54
+        POM55
+@F0057
+POM7.B
+        POM71   [1]
+        POM74   [4]
+POM8.B
+        POM80
+        POM81
+        POM82
+POM9.B
+        POM96   [6]
+@F005E
+POM14.B
+        POM142  [2]
+        POM143
+        POM144
+@F0060
+PMC0.B
+        PMC00
+        PMC01
+        PMC02
+        PMC03
+@F0063
+PMC3.B
+        PMC35   [5]
+        PMC36
+        PMC37
+@F006A
+PMC10.B
+        PMC100
+PMC11.B
+        PMC115  [5]
+        PMC116
+        PMC117
+PMC12.B
+        PMC120
+@F006E
+PMC14.B
+        PMC147  [7]
+@F0070
+NFEN0.B
+        SNFEN00
+        SNFEN10 [2]
+        SNFEN20 [4]
+        SNFEN30 [6]
+NFEN1.B
+        TNFEN00
+        TNFEN01
+        TNFEN02
+        TNFEN03
+        TNFEN04
+        TNFEN05
+        TNFEN06
+        TNFEN07
+NFEN2.B
+        TNFEN10
+        TNFEN11
+        TNFEN12
+        TNFEN13
+        TNFEN14
+        TNFEN15
+        TNFEN16
+        TNFEN17
+ISC.B
+        ISC     [1:0]
+TIS0.B
+        TIS0    [2:0]
+@F0076
+ADPC.B
+        ADPC    [3:0]
+PIOR.B
+        PIOR0
+        PIOR1
+        PIOR2
+        PIOR3
+        PIOR4
+        PIOR5
+IAWCTL.B
+        GCSC
+        GINT
+        GPORT
+        GRAM    [5:4]
+        IAWEN   [7]
+@F007D
+GDIDIS.B
+        GDIDIS
+@F0090
+DFLCTL.B
+        DFLEN
+@F00A0
+HIOTRM.B
+        HIOTRM  [5:0]
+@F00A8
+HOCODIV.B
+        HOCODIV [2:0]
+@F00E0
+MDCL.H
+MDCH.H
+@F00E8
+MDUC.B
+        DIVST
+        MACSF
+        MACOF
+        MDSM
+        MACMODE [6]
+        DIVMODE
+@F00F0
+PER0.B
+        TAU0EN
+        TAU1EN
+        SAU0EN
+        SAU1EN
+        IICA0EN
+        ADCEN
+        IICA1EN
+        RTCEN
+@F00F3
+OSMC.B
+        WUTMMCK0 [4]
+        RTCLPC  [7]
+@F00F5
+RPECTL.B
+        RPEF    [0]
+        RPERDIS [7]
+@F00FE
+BCDADJ.B
+@F0100
+SSR00.HB
+        SSR00L	[7:0]
+&
+        OVF00
+        PEF00
+        BFF00   [5]
+        TSF00
+SSR01.HB
+        SSR01L	[7:0]
+&
+        OVF01
+        PEF01
+        FEF01
+        BFF01   [5]
+        TSF01
+SSR02.HB
+        SSR02L	[7:0]
+&
+        OVF02
+        PEF02
+        BFF02   [5]
+        TSF02
+SSR03.HB
+        SSR03L	[7:0]
+&
+        OVF03
+        PEF03
+        FEF03
+        BFF03   [5]
+        TSF03
+SIR00.HB
+        SIR00L	[7:0]
+&
+        OVCT00
+        PECT00
+        FECT00
+SIR01.HB
+        SIR01L	[7:0]
+&
+        OVCT01
+        PECT01
+        FECT01
+SIR02.HB
+        SIR02L	[7:0]
+&
+        OVCT02
+        PECT02
+        FECT02
+SIR03.HB
+        SIR03L	[7:0]
+&
+        OVCT03
+        PECT03
+        FECT03
+SMR00.H
+        MD00    [2:0]
+        CCS00   [14]
+        CKS00
+SMR01.H
+        MD01    [2:0]
+        SIS01   [6]
+        STS01   [8]
+        CCS01   [14]
+        CKS01
+SMR02.H
+        MD02    [2:0]
+        CCS02   [14]
+        CKS02
+SMR03.H
+        MD03    [2:0]
+        SIS03   [6]
+        STS03   [8]
+        CCS03   [14]
+        CKS03
+SCR00.H
+        DLS00   [1:0]
+        SLC00   [5:4]
+        DIR00   [7]
+        PTC00   [9:8]
+        EOC00
+        CKP00   [12]
+        DAP00
+        RXE00
+        TXE00
+SCR01.H
+        DLS01   [1:0]
+        SLC01   [4]
+        DIR01   [7]
+        PTC01   [9:8]
+        EOC01
+        CKP01   [12]
+        DAP01
+        RXE01
+        TXE01
+SCR02.H
+        DLS02
+        SLC02   [5:4]
+        DIR02   [7]
+        PTC02   [9:8]
+        EOC02
+        CKP02   [12]
+        DAP02
+        RXE02
+        TXE02
+SCR03.H
+        DLS03
+        SLC03   [4]
+        DIR03   [7]
+        PTC03   [9:8]
+        EOC03
+        CKP03   [12]
+        DAP03
+        RXE03
+        TXE03
+SE0.HB
+        SE0L	[7:0]
+&
+        SE00
+        SE01
+        SE02
+        SE03
+SS0.HB
+        SS0L	[7:0]
+&
+        SS00
+        SS01
+        SS02
+        SS03
+ST0.HB
+        ST0L	[7:0]
+&
+        ST00
+        ST01
+        ST02
+        ST03
+SPS0.HB
+        SPS0L	[7:0]
+&
+        PRS00   [3:0]
+        PRS01   [7:4]
+SO0.H
+        SO00
+        SO01
+        SO02
+        SO03
+        CKO00   [8]
+        CKO01
+        CKO02
+        CKO03
+SOE0.HB
+        SOE0L	[7:0]
+&
+        SOE00
+        SOE01
+        SOE02
+        SOE03
+@F0134
+SOL0.HB
+        SOL0L	[7:0]
+&
+        SOL00
+        SOL02   [2]
+@F0138
+SSC0.HB
+        SSC0L	[7:0]
+&
+        SWC0
+        SSEC0
+@F0140
+SSR10.HB
+        SSR10L	[7:0]
+&
+        OVF10
+        PEF10
+        BFF10   [5]
+        TSF10
+SSR11.HB
+        SSR11L	[7:0]
+&
+        OVF11
+        PEF11
+        FEF11
+        BFF11   [5]
+        TSF11
+SSR12.HB
+        SSR12L	[7:0]
+&
+        OVF12
+        PEF12
+        BFF12   [5]
+        TSF12
+SSR13.HB
+        SSR13L	[7:0]
+&
+        OVF13
+        PEF13
+        FEF13
+        BFF13   [5]
+        TSF13
+SIR10.HB
+        SIR10L	[7:0]
+&
+        OVCT10
+        PECT10
+SIR11.HB
+        SIR11L	[7:0]
+&
+        OVCT11
+        PECT11
+        FECT11
+SIR12.HB
+        SIR12L	[7:0]
+&
+        OVCT12
+        PECT12
+SIR13.HB
+        SIR13L	[7:0]
+&
+        OVCT13
+        PECT13
+        FECT13
+SMR10.H
+        MD10    [2:0]
+        CCS10   [14]
+        CKS10
+SMR11.H
+        MD11    [2:0]
+        SIS11   [6]
+        STS11   [8]
+        CCS11   [14]
+        CKS11
+SMR12.H
+        MD12    [2:0]
+        CCS12   [14]
+        CKS12
+SMR13.H
+        MD13    [2:0]
+        SIS13   [6]
+        STS13   [8]
+        CCS13   [14]
+        CKS13
+SCR10.H
+        DLS10   [1:0]
+        SLC10   [5:4]
+        DIR10   [7]
+        PTC10   [9:8]
+        EOC10
+        CKP10   [12]
+        DAP10
+        RXE10
+        TXE10
+SCR11.H
+        DLS11   [1:0]
+        SLC11   [4]
+        DIR11   [7]
+        PTC11   [9:8]
+        EOC11
+        CKP11   [12]
+        DAP11
+        RXE11
+        TXE11
+SCR12.H
+        DLS12
+        SLC12   [5:4]
+        DIR12   [7]
+        PTC12   [9:8]
+        EOC12
+        CKP12   [12]
+        DAP12
+        RXE12
+        TXE12
+SCR13.H
+        DLS13
+        SLC13   [4]
+        DIR13   [7]
+        PTC13   [9:8]
+        EOC13
+        CKP13   [12]
+        DAP13
+        RXE13
+        TXE13
+SE1.HB
+        SE1L	[7:0]
+&
+        SE10
+        SE11
+        SE12
+        SE13
+SS1.HB
+        SS1L	[7:0]
+&
+        SS10
+        SS11
+        SS12
+        SS13
+ST1.HB
+        ST1L	[7:0]
+&
+        ST10
+        ST11
+        ST12
+        ST13
+SPS1.HB
+        SPS1L	[7:0]
+&
+        PRS10   [3:0]
+        PRS11   [7:4]
+SO1.H
+        SO10
+        SO11
+        SO12
+        SO13
+        CKO10   [8]
+        CKO11
+        CKO12
+        CKO13
+SOE1.HB
+        SOE1L	[7:0]
+&
+        SOE10
+        SOE11
+        SOE12
+        SOE13
+@F0174
+SOL1.HB
+        SOL1L	[7:0]
+&
+        SOL10
+        SOL12   [2]
+@F0178
+SSC1.HB
+        SSC1L	[7:0]
+&
+        SWC1
+        SSEC1
+@F0180
+TCR00.H
+TCR01.H
+TCR02.H
+TCR03.H
+TCR04.H
+TCR05.H
+TCR06.H
+TCR07.H
+TMR00.H
+        MD00    [3:0]
+        CIS00   [7:6]
+        STS00   [10:8]
+        CCS00   [12]
+        CKS00   [15:14]
+TMR01.H
+        MD01    [3:0]
+        CIS01   [7:6]
+        STS01   [10:8]
+        SPLIT01
+        CCS01
+        CKS01   [15:14]
+TMR02.H
+        MD02    [3:0]
+        CIS02   [7:6]
+        STS02   [10:8]
+        MASTER02
+        CCS02
+        CKS02   [15:14]
+TMR03.H
+        MD03    [3:0]
+        CIS03   [7:6]
+        STS03   [10:8]
+        SPLIT03
+        CCS03
+        CKS03   [15:14]
+TMR04.H
+        MD04    [3:0]
+        CIS04   [7:6]
+        STS04   [10:8]
+        MASTER04
+        CCS04
+        CKS04   [15:14]
+TMR05.H
+        MD05    [3:0]
+        CIS05   [7:6]
+        STS05   [10:8]
+        CCS05   [12]
+        CKS05   [15:14]
+TMR06.H
+        MD06    [3:0]
+        CIS06   [7:6]
+        STS06   [10:8]
+        MASTER06
+        CCS06
+        CKS06   [15:14]
+TMR07.H
+        MD07    [3:0]
+        CIS07   [7:6]
+        STS07   [10:8]
+        CCS07   [12]
+        CKS07   [15:14]
+TSR00.HB
+        TSR00L	[7:0]
+&
+        OVF
+TSR01.HB
+        TSR01L	[7:0]
+&
+        OVF
+TSR02.HB
+        TSR02L	[7:0]
+&
+        OVF
+TSR03.HB
+        TSR03L	[7:0]
+&
+        OVF
+TSR04.HB
+        TSR04L	[7:0]
+&
+        OVF
+TSR05.HB
+        TSR05L	[7:0]
+&
+        OVF
+TSR06.HB
+        TSR06L	[7:0]
+&
+        OVF
+TSR07.HB
+        TSR07L	[7:0]
+&
+        OVF
+TE0.HB
+        TE0L	[7:0]
+&
+        TE00
+        TE01
+        TE02
+        TE03
+        TE04
+        TE05
+        TE06
+        TE07
+        TEH01   [9]
+        TEH03   [11]
+TS0.HB
+        TS0L	[7:0]
+&
+        TS00
+        TS01
+        TS02
+        TS03
+        TS04
+        TS05
+        TS06
+        TS07
+        TSH01   [9]
+        TSH03   [11]
+TT0.HB
+        TT0L	[7:0]
+&
+        TT00
+        TT01
+        TT02
+        TT03
+        TT04
+        TT05
+        TT06
+        TT07
+        TTH01   [9]
+        TTH03   [11]
+TPS0.HB
+        PRS00   [3:0]
+        PRS01   [7:4]
+        PRS02   [9:8]
+        PRS03   [13:12]
+TO0.HB
+        TO0L	[7:0]
+&
+        TO00
+        TO01
+        TO02
+        TO03
+        TO04
+        TO05
+        TO06
+        TO07
+TOE0.HB
+        TOE0L	[7:0]
+&
+        TOE00
+        TOE01
+        TOE02
+        TOE03
+        TOE04
+        TOE05
+        TOE06
+        TOE07
+TOL0.HB
+        TOL0L	[7:0]
+&
+        TOL01   [1]
+        TOL02
+        TOL03
+        TOL04
+        TOL05
+        TOL06
+        TOL07
+TOM0.HB
+        TOM0L	[7:0]
+&
+        TOM01   [1]
+        TOM02
+        TOM03
+        TOM04
+        TOM05
+        TOM06
+        TOM07
+TCR10.H
+TCR11.H
+TCR12.H
+TCR13.H
+TCR14.H
+TCR15.H
+TCR16.H
+TCR17.H
+TMR10.H
+        MD10    [3:0]
+        CIS10   [7:6]
+        STS10   [10:8]
+        CCS10   [12]
+        CKS10   [15:14]
+TMR11.H
+        MD11    [3:0]
+        CIS11   [7:6]
+        STS11   [10:8]
+        SPLIT11
+        CCS11
+        CKS11   [15:14]
+TMR12.H
+        MD12    [3:0]
+        CIS12   [7:6]
+        STS12   [10:8]
+        MASTER12
+        CCS12
+        CKS12   [15:14]
+TMR13.H
+        MD13    [3:0]
+        CIS13   [7:6]
+        STS13   [10:8]
+        SPLIT13
+        CCS13
+        CKS13   [15:14]
+TMR14.H
+        MD14    [3:0]
+        CIS14   [7:6]
+        STS14   [10:8]
+        MASTER14
+        CCS14
+        CKS14   [15:14]
+TMR15.H
+        MD15    [3:0]
+        CIS15   [7:6]
+        STS15   [10:8]
+        CCS15   [12]
+        CKS15   [15:14]
+TMR16.H
+        MD16    [3:0]
+        CIS16   [7:6]
+        STS16   [10:8]
+        MASTER16
+        CCS16
+        CKS16   [15:14]
+TMR17.H
+        MD17    [3:0]
+        CIS17   [7:6]
+        STS17   [10:8]
+        CCS17   [12]
+        CKS17   [15:14]
+TSR10.HB
+        TSR10L	[7:0]
+&
+        OVF
+TSR11.HB
+        TSR11L	[7:0]
+&
+        OVF
+TSR12.HB
+        TSR12L	[7:0]
+&
+        OVF
+TSR13.HB
+        TSR13L	[7:0]
+&
+        OVF
+TSR14.HB
+        TSR14L	[7:0]
+&
+        OVF
+TSR15.HB
+        TSR15L	[7:0]
+&
+        OVF
+TSR16.HB
+        TSR16L	[7:0]
+&
+        OVF
+TSR17.HB
+        TSR17L	[7:0]
+&
+        OVF
+TE1.HB
+        TE1L	[7:0]
+&
+        TE10
+        TE11
+        TE12
+        TE13
+        TE14
+        TE15
+        TE16
+        TE17
+        TEH11   [9]
+        TEH13   [11]
+TS1.HB
+        TS1L	[7:0]
+&
+        TS10
+        TS11
+        TS12
+        TS13
+        TS14
+        TS15
+        TS16
+        TS17
+        TSH11   [9]
+        TSH13   [11]
+TT1.HB
+        TT1L	[7:0]
+&
+        TT10
+        TT11
+        TT12
+        TT13
+        TT14
+        TT15
+        TT16
+        TT17
+        TTH11   [9]
+        TTH13   [11]
+TPS1.H
+        PRS10   [3:0]
+        PRS11   [7:4]
+        PRS12   [9:8]
+        PRS13   [13:12]
+TO1.HB
+        TO1L	[7:0]
+&
+        TO10
+        TO11
+        TO12
+        TO13
+        TO14
+        TO15
+        TO16
+        TO17
+TOE1.HB
+        TOE1L	[7:0]
+&
+        TOE10
+        TOE11
+        TOE12
+        TOE13
+        TOE14
+        TOE15
+        TOE16
+        TOE17
+TOL1.HB
+        TOL1L	[7:0]
+&
+        TOL11   [1]
+        TOL12
+        TOL13
+        TOL14
+        TOL15
+        TOL16
+        TOL17
+TOM1.HB
+        TOM1L	[7:0]
+&
+        TOM11   [1]
+        TOM12
+        TOM13
+        TOM14
+        TOM15
+        TOM16
+        TOM17
+DSA2.B
+DSA3.B
+DRA2.HB
+        DRA2L	[7:0]
+        DRA2H	[15:8]
+DRA3.HB
+        DRA3L	[7:0]
+        DRA3H	[15:8]
+DBC2.HB
+        DBC2L	[7:0]
+        DBC2H	[15:8]
+DBC3.HB
+        DBC3L	[7:0]
+        DBC3H	[15:8]
+DMC2.B
+        IFC2    [3:0]
+        DWAIT2
+        DS2
+        DRS2
+        STG2
+DMC3.B
+        IFC3    [3:0]
+        DWAIT3
+        DS3
+        DRS3
+        STG3
+DRC2.B
+        DST2
+        DEN2    [7]
+DRC3.B
+        DST3
+        DEN3    [7]
+@F0230
+IICCTL00.B
+        SPT0
+        STT0
+        ACKE0
+        WTIM0
+        SPIE0
+        WREL0
+        LREL0
+        IICE0
+IICCTL01.B
+        PRS0
+        DFC0    [2]
+        SMC0
+        DAD0
+        CLD0
+        WUP0    [7]
+IICWL0.B
+IICWH0.B
+SVA0.B
+@F0238
+IICCTL10.B
+        SPT1
+        STT1
+        ACKE1
+        WTIM1
+        SPIE1
+        WREL1
+        LREL1
+        IICE1
+IICCTL11.B
+        PRS1
+        DFC1    [2]
+        SMC1
+        DAD1
+        CLD1
+        WUP1    [7]
+IICWL1.B
+IICWH1.B
+SVA1.B
+@F02F0
+CRC0CTL.B
+        FEA     [5:0]
+        CRC0EN  [7]
+@F02F2
+PGCRCL.H
+@F02FA
+CRCD.H
+@FFEE0
+VR24.B
+VR25.B
+VR26.B
+VR27.B
+VR28.B
+VR29.B
+VR30.B
+VR31.B
+VR16.B
+VR17.B
+VR18.B
+VR19.B
+VR20.B
+VR21.B
+VR22.B
+VR23.B
+VR8.B
+VR9.B
+VR10.B
+VR11.B
+VR12.B
+VR13.B
+VR14.B
+VR15.B
+VR0.B
+VR1.B
+VR2.B
+VR3.B
+VR4.B
+VR5.B
+VR6.B
+VR7.B
+@FFF00
+P0.B
+        P00
+        P01
+        P02
+        P03
+        P04
+        P05
+        P06
+        P07
+P1.B
+        P10
+        P11
+        P12
+        P13
+        P14
+        P15
+        P16
+        P17
+P2.B
+        P20
+        P21
+        P22
+        P23
+        P24
+        P25
+        P26
+        P27
+P3.B
+        P30
+        P31
+        P32
+        P33
+        P34
+        P35
+        P36
+        P37
+P4.B
+        P40
+        P41
+        P42
+        P43
+        P44
+        P45
+        P46
+        P47
+P5.B
+        P50
+        P51
+        P52
+        P53
+        P54
+        P55
+        P56
+        P57
+P6.B
+        P60
+        P61
+        P62
+        P63
+        P64
+        P65
+        P66
+        P67
+P7.B
+        P70
+        P71
+        P72
+        P73
+        P74
+        P75
+        P76
+        P77
+P8.B
+        P80
+        P81
+        P82
+        P83
+        P84
+        P85
+        P86
+        P87
+P9.B
+        P90
+        P91
+        P92
+        P93
+        P94
+        P95
+        P96
+        P97
+P10.B
+        P100
+        P101
+        P102
+        P103
+        P104
+        P105
+        P106
+P11.B
+        P110
+        P111
+        P112
+        P113
+        P114
+        P115
+        P116
+        P117
+P12.B
+        P120
+        P121
+        P122
+        P123
+        P124
+        P125
+        P126
+        P127
+P13.B
+        P130
+        P137    [7]
+P14.B
+        P140
+        P141
+        P142
+        P143
+        P144
+        P145
+        P146
+        P147
+P15.B
+        P150
+        P151
+        P152
+        P153
+        P154
+        P155
+        P156
+SDR00.HB
+        TXD0    [7:0]
+&
+        SIO00   [7:0]
+SDR01.HB
+        RXD0    [7:0]
+&
+        SIO01	[7:0]
+SDR12.HB
+        TXD3	[7:0]
+&
+        SIO30	[7:0]
+SDR13.HB
+        RXD3	[7:0]
+&
+        SIO31	[7:0]
+TDR00.H
+TDR01.HB
+        TDR01L	[7:0]
+        TDR01H	[15:8]
+@FFF1E
+ADCR.HB
+        ADCRH	[15:8]
+PM0.B
+        PM00
+        PM01
+        PM02
+        PM03
+        PM04
+        PM05
+        PM06
+        PM07
+PM1.B
+        PM10
+        PM11
+        PM12
+        PM13
+        PM14
+        PM15
+        PM16
+        PM17
+PM2.B
+        PM20
+        PM21
+        PM22
+        PM23
+        PM24
+        PM25
+        PM26
+        PM27
+PM3.B
+        PM30
+        PM31
+        PM32
+        PM33
+        PM34
+        PM35
+        PM36
+        PM37
+PM4.B
+        PM40
+        PM41
+        PM42
+        PM43
+        PM44
+        PM45
+        PM46
+        PM47
+PM5.B
+        PM50
+        PM51
+        PM52
+        PM53
+        PM54
+        PM55
+        PM56
+        PM57
+PM6.B
+        PM60
+        PM61
+        PM62
+        PM63
+        PM64
+        PM65
+        PM66
+        PM67
+PM7.B
+        PM70
+        PM71
+        PM72
+        PM73
+        PM74
+        PM75
+        PM76
+        PM77
+PM8.B
+        PM80
+        PM81
+        PM82
+        PM83
+        PM84
+        PM85
+        PM86
+        PM87
+PM9.B
+        PM90
+        PM91
+        PM92
+        PM93
+        PM94
+        PM95
+        PM96
+        PM97
+PM10.B
+        PM100
+        PM101
+        PM102
+        PM103
+        PM104
+        PM105
+        PM106
+PM11.B
+        PM110
+        PM111
+        PM112
+        PM113
+        PM114
+        PM115
+        PM116
+        PM117
+PM12.B
+        PM120
+        PM125   [5]
+        PM126
+        PM127
+@FFF2E
+PM14.B
+        PM140
+        PM141
+        PM142
+        PM143
+        PM144
+        PM145
+        PM146
+        PM147
+PM15.B
+        PM150
+        PM151
+        PM152
+        PM153
+        PM154
+        PM155
+        PM156
+ADM0.B
+        ADCE
+        LV      [2:1]
+        FR      [5:3]
+        ADMD
+        ADCS
+ADS.B
+        ADS     [4:0]
+        ADISS   [7]
+ADM1.B
+        ADTRS   [1:0]
+        ADSCM   [5]
+        ADTMD   [7:6]
+@FFF37
+KRM.B
+        KRM0
+        KRM1
+        KRM2
+        KRM3
+        KRM4
+        KRM5
+        KRM6
+        KRM7
+EGP0.B
+        EGP0
+        EGP1
+        EGP2
+        EGP3
+        EGP4
+        EGP5
+        EGP6
+        EGP7
+EGN0.B
+        EGN0
+        EGN1
+        EGN2
+        EGN3
+        EGN4
+        EGN5
+        EGN6
+        EGN7
+EGP1.B
+        EGP8
+        EGP9
+        EGP10
+        EGP11
+EGN1.B
+        EGN8
+        EGN9
+        EGN10
+        EGN11
+@FFF44
+SDR02.HB
+        TXD1	[7:0]
+&
+        SIO10	[7:0]
+SDR03.HB
+        RXD1	[7:0]
+&
+        SIO11	[7:0]
+SDR10.HB
+        TXD2	[7:0]
+&
+        SIO20	[7:0]
+SDR11.HB
+        RXD2	[7:0]
+&
+        SIO21	[7:0]
+@FFF50
+IICA0.B
+IICS0.B
+        SPD0
+        STD0
+        ACKD0
+        TRC0
+        COI0
+        EXC0
+        ALD0
+        MSTS0
+IICF0.B
+        IICRSV0
+        STCEN0
+        IICBSY0 [6]
+        STCF0
+@FFF54
+IICA1.B
+IICS1.B
+        SPD1
+        STD1
+        ACKD1
+        TRC1
+        COI1
+        EXC1
+        ALD1
+        MSTS1
+IICF1.B
+        IICRSV1
+        STCEN1
+        IICBSY1 [6]
+        STCF1
+@FFF64
+TDR02.H
+TDR03.HB
+        TDR03L	[7:0]
+        TDR03H	[15:8]
+TDR04.H
+TDR05.H
+TDR06.H
+TDR07.H
+TDR10.H
+TDR11.HB
+        TDR11L	[7:0]
+        TDR11H	[15:8]
+TDR12.H
+TDR13.HB
+        TDR13L	[7:0]
+        TDR13H	[15:8]
+TDR14.H
+TDR15.H
+TDR16.H
+TDR17.H
+@FFF90
+ITMC.H
+        ITCMP   [11:0]
+        RINTE   [15]
+SEC.B
+        SEC1    [3:0]
+        SEC10   [6:4]
+MIN.B
+        MIN1    [3:0]
+        MIN10   [6:4]
+HOUR.B
+        HOUR1   [3:0]
+        HOUR10  [5:4]
+WEEK.B
+        WEEK1   [2:0]
+DAY.B
+        DAY1    [3:0]
+        DAY10   [5:4]
+MONTH.B
+        MONTH1  [3:0]
+        MONTH10
+YEAR.B
+        YEAR1   [3:0]
+        YEAR10  [7:4]
+SUBCUD.B
+        F       [6:0]
+        DEV
+ALARMWM.B
+        WM1     [3:0]
+        WM10    [6:4]
+ALARMWH.B
+        WH1     [3:0]
+        WH10    [5:4]
+ALARMWW.B
+        WW      [6:0]
+RTCC0.B
+        CT      [2:0]
+        AMPM
+        RCLOE1  [5]
+        RTCE    [7]
+RTCC1.B
+        RWAIT
+        RWST
+        RIFG    [3]
+        WAFG
+        WALIE   [6]
+        WALE
+@FFFA0
+CMC.B
+        AMPH
+        AMPHS   [2:1]
+        OSCSELS [4]
+        EXCLKS
+        OSCSEL
+        EXCLK
+CSC.B
+        HIOSTOP
+        XTSTOP  [6]
+        MSTOP
+OSTC.B
+        MOST	[7:0]
+OSTS.B
+        OSTS    [2:0]
+CKC.B
+        MCM0    [4]
+        MCS
+        CSS
+        CLS
+CKS0.B
+        CCS0    [2:0]
+        CSEL0
+        PCLOE0  [7]
+CKS1.B
+        CCS1    [2:0]
+        CSEL1
+        PCLOE1  [7]
+@FFFA8
+RESF.B
+        LVIRF
+        IAWRF
+        RPERF
+        WDTRF   [4]
+        TRAP    [7]
+LVIM.B
+        LVIF
+        LVIOMSK
+        LVISEN  [7]
+LVIS.B
+        LVILV
+        LVIMD   [7]
+WDTE.B
+CRCIN.B
+@FFFB0
+DSA0.B
+DSA1.B
+DRA0.HB
+        DRA0L	[7:0]
+        DRA0H	[15:8]
+DRA1.HB
+        DRA1L	[7:0]
+        DRA1H	[15:8]
+DBC0.HB
+        DBC0L	[7:0]
+        DBC0H	[15:8]
+DBC1.HB
+        DBC1L	[7:0]
+        DBC1H	[15:8]
+DMC0.B
+        IFC0    [3:0]
+        DWAIT0
+        DS0
+        DRS0
+        STG0
+DMC1.B
+        IFC1    [3:0]
+        DWAIT1
+        DS1
+        DRS1
+        STG1
+DRC0.B
+        DST0
+        DEN0    [7]
+DRC1.B
+        DST1
+        DEN1    [7]
+@FFFD0
+IF2.HB
+        IF2L	[7:0]
+        IF2H	[15:8]
+&
+        TMIF05
+        TMIF06
+        TMIF07
+        PIF6
+        PIF7
+        PIF8
+        PIF9
+        PIF10
+        PIF11
+        TMIF10
+        TMIF11
+        TMIF12
+        SREIF3
+        MDIF
+        IICAIF1
+        FLIF
+&
+        TMIF13H [12]
+IF3.HB
+        IF3L	[7:0]
+&
+        DMAIF2
+        DMAIF3
+        TMIF14
+        TMIF15
+        TMIF16
+        TMIF17
+@FFFD4
+MK2.HB
+        MK2L	[7:0]
+        MK2H	[15:8]
+&
+        TMMK05
+        TMMK06
+        TMMK07
+        PMK6
+        PMK7
+        PMK8
+        PMK9
+        PMK10
+        PMK11
+        TMMK10
+        TMMK11
+        TMMK12
+        SREMK3
+        MDMK
+        IICAMK1
+        FLMK
+&
+        TMMK13H [12]
+MK3.HB
+        MK3L	[7:0]
+&
+        DMAMK2
+        DMAMK3
+        TMMK14
+        TMMK15
+        TMMK16
+        TMMK17
+@FFFD8
+PR02.HB
+        PR02L	[7:0]
+        PR02H	[15:8]
+&
+        TMPR005
+        TMPR006
+        TMPR007
+        PPR06
+        PPR07
+        PPR08
+        PPR09
+        PPR010
+        PPR011
+        TMPR010
+        TMPR011
+        TMPR012
+        SREPR03
+        MDPR0
+        IICAPR01
+        FLPR0
+&
+        TMPR013H [12]
+PR03.HB
+        PR03L	[7:0]
+&
+        DMAPR02
+        DMAPR03
+        TMPR014
+        TMPR015
+        TMPR016
+        TMPR017
+@FFFDC
+PR12.HB
+        PR12L	[7:0]
+        PR12H	[15:8]
+&
+        TMPR105
+        TMPR106
+        TMPR107
+        PPR16
+        PPR17
+        PPR18
+        PPR19
+        PPR110
+        PPR111
+        TMPR110
+        TMPR111
+        TMPR112
+        SREPR13
+        MDPR1
+        IICAPR11
+        FLPR1
+&
+        TMPR113H [12]
+PR13.HB
+        PR13L	[7:0]
+&
+        DMAPR12
+        DMAPR13
+        TMPR114
+        TMPR115
+        TMPR116
+        TMPR117
+@FFFE0
+IF0.HB
+        IF0L	[7:0]
+        IF0H	[15:8]
+&
+        WDTIIF
+        LVIIF
+        PIF0
+        PIF1
+        PIF2
+        PIF3
+        PIF4
+        PIF5
+        STIF2
+        SRIF2
+        SREIF2
+        DMAIF0
+        DMAIF1
+        STIF0
+        SRIF0
+        SREIF0
+&
+        CSIIF20 [8]
+        CSIIF21
+        TMIF11H
+        CSIIF00 [13]
+        CSIIF01
+        TMIF01H
+&
+        IICIF20 [8]
+        IICIF21
+        IICIF00 [13]
+        IICIF01
+IF1.HB
+        IF1L	[7:0]
+        IF1H	[15:8]
+&
+        STIF1
+        SRIF1
+        SREIF1
+        IICAIF0
+        TMIF00
+        TMIF01
+        TMIF02
+        TMIF03
+        ADIF
+        RTCIF
+        ITIF
+        KRIF
+        STIF3
+        SRIF3
+        TMIF13
+        TMIF04
+&
+        CSIIF10
+        CSIIF11
+        TMIF03H
+        CSIIF30 [12]
+        CSIIF31
+&
+        IICIF10
+        IICIF11
+        IICIF30 [12]
+        IICIF31
+MK0.HB
+        MK0L	[7:0]
+        MK0H	[15:8]
+&
+        WDTIMK
+        LVIMK
+        PMK0
+        PMK1
+        PMK2
+        PMK3
+        PMK4
+        PMK5
+        STMK2
+        SRMK2
+        SREMK2
+        DMAMK0
+        DMAMK1
+        STMK0
+        SRMK0
+        SREMK0
+&
+        CSIMK20 [8]
+        CSIMK21
+        TMMK11H
+        CSIMK00 [13]
+        CSIMK01
+        TMMK01H
+&
+        IICMK20 [8]
+        IICMK21
+        IICMK00 [13]
+        IICMK01
+MK1.HB
+        MK1L	[7:0]
+        MK1H	[15:8]
+&
+        STMK1
+        SRMK1
+        SREMK1
+        IICAMK0
+        TMMK00
+        TMMK01
+        TMMK02
+        TMMK03
+        ADMK
+        RTCMK
+        ITMK
+        KRMK
+        STMK3
+        SRMK3
+        TMMK13
+        TMMK04
+&
+        CSIMK10
+        CSIMK11
+        TMMK03H
+        CSIMK30 [12]
+        CSIMK31
+&
+        IICMK10
+        IICMK11
+        IICMK30 [12]
+        IICMK31
+PR00.HB
+        PR00L	[7:0]
+        PR00H	[15:8]
+&
+        WDTIPR0
+        LVIPR0
+        PPR00
+        PPR01
+        PPR02
+        PPR03
+        PPR04
+        PPR05
+        STPR02
+        SRPR02
+        SREPR02
+        DMAPR00
+        DMAPR01
+        STPR00
+        SRPR00
+        SREPR00
+&
+        CSIPR020 [8]
+        CSIPR021
+        TMPR011H
+        CSIPR000 [13]
+        CSIPR001
+        TMPR001H
+&
+        IICPR020 [8]
+        IICPR021
+        IICPR000 [13]
+        IICPR001
+PR01.HB
+        PR01L	[7:0]
+        PR01H	[15:8]
+&
+        STPR01
+        SRPR01
+        SREPR01
+        IICAPR00
+        TMPR000
+        TMPR001
+        TMPR002
+        TMPR003
+        ADPR0
+        RTCPR0
+        ITPR0
+        KRPR0
+        STPR03
+        SRPR03
+        TMPR013
+        TMPR004
+&
+        CSIPR010
+        CSIPR011
+        TMPR003H
+        CSIPR030 [12]
+        CSIPR031
+&
+        IICPR010
+        IICPR011
+        IICPR030 [12]
+        IICPR031
+PR10.HB
+        PR10L	[7:0]
+        PR10H	[15:8]
+&
+        WDTIPR1
+        LVIPR1
+        PPR10
+        PPR11
+        PPR12
+        PPR13
+        PPR14
+        PPR15
+        STPR12
+        SRPR12
+        SREPR12
+        DMAPR10
+        DMAPR11
+        STPR10
+        SRPR10
+        SREPR10
+&
+        CSIPR120 [8]
+        CSIPR121
+        TMPR111H
+        CSIPR100 [13]
+        CSIPR101
+        TMPR101H
+&
+        IICPR120 [8]
+        IICPR121
+        IICPR100 [13]
+        IICPR101
+PR11.HB
+        PR11L	[7:0]
+        PR11H	[15:8]
+&
+        STPR11
+        SRPR11
+        SREPR11
+        IICAPR10
+        TMPR100
+        TMPR101
+        TMPR102
+        TMPR103
+        ADPR1
+        RTCPR1
+        ITPR1
+        KRPR1
+        STPR13
+        SRPR13
+        TMPR113
+        TMPR104
+&
+        CSIPR110
+        CSIPR111
+        TMPR103H
+        CSIPR130 [12]
+        CSIPR131
+&
+        IICPR110
+        IICPR111
+        IICPR130 [12]
+        IICPR131
+MDAL.H
+MDAH.H
+MDBH.H
+MDBL.H
+@FFFFE
+PMC.B
+        MAA

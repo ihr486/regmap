@@ -1149,7 +1149,13 @@ IRCR.B
 #module MTU
 @00088600
 MTU3/TCR.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 MTU4/TCR.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 MTU3/TMDR.B
 MTU4/TMDR.B
 MTU3/TIORH.B
@@ -1215,10 +1221,28 @@ MTU5/NFCR.B
 #module MTU0
 @00088700
 TCR.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 TMDR.B
+        MD      [3:0]
+        BFA
+        BFB
 TIORH.B
+        IOA     [3:0]
+        IOB     [7:4]
 TIORL.B
+        IOC     [3:0]
+        IOD     [7:4]
 TIER.B
+        TGIEA
+        TGIEB
+        TGIEC
+        TGIED
+        TCIEV
+        TCIEU
+        TTGE2
+        TTGE
 TSR.B
 TCNT.H
 TGRA.H
@@ -1234,6 +1258,9 @@ TBTM.B
 #module MTU1
 @00088780
 TCR.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 TMDR.B
 TIOR.B
 @00088784
@@ -1248,6 +1275,9 @@ TICCR.B
 #module MTU2
 @00088800
 TCR.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 TMDR.B
 TIOR.B
 @00088804
@@ -1262,18 +1292,27 @@ TGRB.H
 TCNTU.H
 TGRU.H
 TCRU.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 @00088886
 TIORU.B
 @00088890
 TCNTV.H
 TGRV.H
 TCRV.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 @00088896
 TIORV.B
 @000888A0
 TCNTW.H
 TGRW.H
 TCRW.B
+        TPSC    [2:0]
+        CKEG    [4:3]
+        CCLR    [7:5]
 @000888A6
 TIORW.B
 @000888B2
@@ -1282,6 +1321,9 @@ TIER.B
 TSTR.B
 @000888B6
 TCNTCMPCLR.B
+        CMPCLR5W
+        CMPCLR5V
+        CMPCLR5U
 
 #module POE
 @00088900
@@ -1652,113 +1694,578 @@ TCNT.B
 
 @0008C000
 PORT0/PDR.B
+        B2      [2]
+        B4      [4]
+        B7      [7]
 PORT1/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT2/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT3/PDR.B
+        B0
+        B1
+        B2
+        B5.R    [5]
 PORT4/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B6      [6]
 PORT5/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
 @0008C009
 PORT9/PDR.B
+        B0
+        B1
+        B2
 PORTA/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTB/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTC/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTD/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
 PORTE/PDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTF/PDR.B
+        B6      [6]
+        B7
 @0008C012
 PORTJ/PDR.B
+        B0
+        B2      [2]
+        B3
+        B6      [6]
+        B7
 @0008C020
 PORT0/PODR.B
+        B2      [2]
+        B4      [4]
+        B7      [7]
 PORT1/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT2/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT3/PODR.B
+        B0
+        B1
+        B2
 PORT4/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B6      [6]
 PORT5/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
 @0008C029
 PORT9/PODR.B
+        B0
+        B1
+        B2
 PORTA/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTB/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTC/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTD/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
 PORTE/PODR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTF/PODR.B
+        B6      [6]
+        B7
 @0008C032
 PORTJ/PODR.B
+        B0
+        B2      [2]
+        B3
+        B6      [6]
+        B7
 @0008C040
 PORT0/PIDR.B
+        B2      [2]
+        B4      [4]
+        B7      [7]
 PORT1/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT2/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT3/PIDR.B
+        B0
+        B1
+        B2
+        B5      [5]
 PORT4/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B6      [6]
 PORT5/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
 @0008C049
 PORT9/PIDR.B
+        B0
+        B1
+        B2
 PORTA/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTB/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTC/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTD/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
 PORTE/PIDR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTF/PIDR.B
+        B6      [6]
+        B7
 @0008C051
 PORTH/PIDR.B
+        B7      [7]
 PORTJ/PIDR.B
+        B0
+        B2      [2]
+        B3
+        B6      [6]
+        B7
 @0008C060
 PORT0/PMR.B
+        B2      [2]
+        B4      [4]
+        B7      [7]
 PORT1/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT2/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT3/PMR.B
+        B0
+        B1
+        B2
 PORT4/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B6      [6]
 PORT5/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
 @0008C069
 PORT9/PMR.B
+        B0
+        B1
+        B2
 PORTA/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTB/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTC/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTD/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
 PORTE/PMR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTF/PMR.B
+        B6      [6]
+        B7
 @0008C071
 PORTH/PMR.B
+        B7      [7]
 PORTJ/PMR.B
+        B0
+        B2      [2]
+        B3
+        B6      [6]
+        B7
 @0008C080
 PORT0/ODR0.B
+        B4      [4]
 PORT0/ODR1.B
+        B0
+        B6      [6]
 PORT1/ODR0.B
+        B0
+        B1
+        B2
+        B4      [4]
+        B6      [6]
 PORT1/ODR1.B
+        B0
+        B1
+        B2
+        B4      [4]
+        B6      [6]
 PORT2/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORT2/ODR1.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORT3/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
 @0008C08A
 PORT5/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORT5/ODR1.B
+        B4      [4]
+        B6      [6]
 @0008C094
 PORTA/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORTA/ODR1.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORTB/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORTB/ODR1.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORTC/ODR0.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 PORTC/ODR1.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 @0008C09C
 PORTE/ODR0.B
+        B0
+        B2      [2]
+        B3
+        B4
+        B6      [6]
 PORTE/ODR1.B
+        B0
+        B2      [2]
+        B4      [4]
+        B6      [6]
 @0008C0A4
 PORTJ/ODR0.B
+        B6      [6]
 @0008C0C0
 PORT0/PCR.B
+        B2      [2]
+        B4      [4]
+        B7      [7]
 PORT1/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT2/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORT3/PCR.B
+        B0
+        B1
+        B2
 @0008C0C5
 PORT5/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
 @0008C0CA
 PORTA/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTB/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTC/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTD/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
 PORTE/PCR.B
+        B0
+        B1
+        B2
+        B3
+        B4
+        B5
+        B6
+        B7
 PORTF/PCR.B
+        B6      [6]
+        B7
 @0008C0D2
 PORTJ/PCR.B
+        B7      [7]
 
 #module MPC
 @0008C11F
@@ -1767,101 +2274,232 @@ PWPR.B
         B0WI
 @0008C121
 PORT/PSRA.B
+        PSEL6   [6]
+        PSEL7
 @0008C142
 P02PFS.B
+        PSEL    [4:0]
 @0008C144
 P04PFS.B
+        PSEL    [4:0]
 @0008C147
 P07PFS.B
+        PSEL    [4:0]
 P10PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P11PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P12PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P13PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P14PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P15PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P16PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P17PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P20PFS.B
+        PSEL    [4:0]
 P21PFS.B
+        PSEL    [4:0]
 P22PFS.B
+        PSEL    [4:0]
 P23PFS.B
+        PSEL    [4:0]
 P24PFS.B
+        PSEL    [4:0]
 P25PFS.B
+        PSEL    [4:0]
 P26PFS.B
+        PSEL    [4:0]
 P27PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 P30PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P31PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 P32PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 @0008C160
 P40PFS.B
+        ASEL    [7]
 P41PFS.B
+        ASEL    [7]
 P42PFS.B
+        ASEL    [7]
 P43PFS.B
+        ASEL    [7]
 P44PFS.B
+        ASEL    [7]
 @0008C166
 P46PFS.B
+        ASEL    [7]
 @0008C168
 P50PFS.B
+        PSEL    [4:0]
 P51PFS.B
+        PSEL    [4:0]
 P52PFS.B
+        PSEL    [4:0]
 P53PFS.B
+        PSEL    [4:0]
 P54PFS.B
+        PSEL    [4:0]
 P55PFS.B
+        PSEL    [4:0]
 P56PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 @0008C188
 P90PFS.B
+        ASEL    [7]
 P91PFS.B
+        ASEL    [7]
 P92PFS.B
+        ASEL    [7]
 @0008C190
 PA0PFS.B
+        PSEL    [4:0]
 PA1PFS.B
+        PSEL    [4:0]
 PA2PFS.B
+        PSEL    [4:0]
 PA3PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PA4PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PA5PFS.B
+        PSEL    [4:0]
 PA6PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PA7PFS.B
+        PSEL    [4:0]
 PB0PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PB1PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PB2PFS.B
+        PSEL    [4:0]
 PB3PFS.B
+        PSEL    [4:0]
 PB4PFS.B
+        PSEL    [4:0]
 PB5PFS.B
+        PSEL    [4:0]
 PB6PFS.B
+        PSEL    [4:0]
 PB7PFS.B
+        PSEL    [4:0]
 PC0PFS.B
+        PSEL    [4:0]
 PC1PFS.B
+        PSEL    [4:0]
 PC2PFS.B
+        PSEL    [4:0]
 PC3PFS.B
+        PSEL    [4:0]
 PC4PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PC5PFS.B
+        PSEL    [4:0]
 PC6PFS.B
+        PSEL    [4:0]
 PC7PFS.B
+        PSEL    [4:0]
 PD0PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PD1PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PD2PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PD3PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 PD4PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
 @0008C1B0
 PE0PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE1PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE2PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE3PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE4PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE5PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE6PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 PE7PFS.B
+        PSEL    [4:0]
+        ISEL    [6]
+        ASEL
 @0008C1BE
 PF6PFS.B
+        PSEL    [4:0]
 PF7PFS.B
+        PSEL    [4:0]
 @0008C1D0
 PJ0PFS.B
+        PSEL    [4:0]
+        ASEL    [7]
 @0008C1D2
 PJ2PFS.B
+        PSEL    [4:0]
+        ASEL    [7]
 PJ3PFS.B
+        PSEL    [4:0]
 @0008C1D6
 PJ6PFS.B
+        PSEL    [4:0]
+        ASEL    [7]
 PJ7PFS.B
+        PSEL    [4:0]
+        ASEL    [7]
 
 #module SYSTEM
 @0008C290
