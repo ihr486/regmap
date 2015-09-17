@@ -1,4 +1,3 @@
-#union_size 1
 #radix 16
 
 @FFF00
@@ -40,22 +39,22 @@ P13.BR
 P14.B
         P147    [7]
 @FFF10
-SDR00.HB
-        TXD0    [7:0]
+SDR00.H
+        TXD0.A  [7:0]
 &
-        SIO00   [7:0]
-SDR01.HB
-        RXD0    [7:0]
+        SIO00.A [7:0]
+SDR01.H
+        RXD0.A  [7:0]
 &
-        SIO01   [7:0]
+        SIO01.A [7:0]
 @FFF18
 TDR00.H
 TDR01.HB
         TDR01L  [7:0]
         TDR01H  [15:8]
 @FFF1E
-ADCR.HBR
-        ADCRH   [15:8]
+ADCR.HR
+        ADCRH.A [15:8]
 &
         ADCR    [15:6]
 PM0.B
@@ -509,15 +508,15 @@ RPECTL.B
 @F00FE
 BCDADJ.B
 @F0100
-SSR00.HBR
-        SSR00L  [7:0]
+SSR00.HR
+        SSR00L.A [7:0]
 &
         OVF00
         PEF00
         BFF00   [5]
         TSF00
-SSR01.HBR
-        SSR01L  [7:0]
+SSR01.HR
+        SSR01L.A [7:0]
 &
         OVF01
         PEF01
@@ -525,13 +524,13 @@ SSR01.HBR
         BFF01   [5]
         TSF01
 @F0108
-SIR00.HB
-        SIR00L  [7:0]
+SIR00.H
+        SIR00L.A [7:0]
 &       
         OVCT00
         PECT00
-SIR01.HB
-        SIR01L  [7:0]
+SIR01.H
+        SIR01L.A [7:0]
 &
         OVCT01
         PECT01
@@ -569,23 +568,23 @@ SCR01.H
         RXE01
         TXE01
 @F0120
-SE0.HBR
-        SE0L    [7:0]
+SE0.HR
+        SE0L.A  [7:0]
 &
         SE00
         SE01
-SS0.HB
-        SS0L    [7:0]
+SS0.H
+        SS0L.A  [7:0]
 &
         SS00
         SS01
-ST0.HB
-        ST0L    [7:0]
+ST0.H
+        ST0L.A  [7:0]
 &
         ST00
         ST01
-SPS0.HB
-        SPS0L   [7:0]
+SPS0.H
+        SPS0L.A [7:0]
 &
         PRS00   [3:0]
         PRS01   [7:4]
@@ -594,19 +593,19 @@ SO0.H
         SO01
         CKO00   [8]
         CKO01
-SOE0.HB
-        SOE0L   [7:0]
+SOE0.H
+        SOE0L.A [7:0]
 &
         SOE00
         SOE01
 @F0134
-SOL0.HB
-        SOL0L   [7:0]
+SOL0.H
+        SOL0L.A [7:0]
 &
         SOL00
 @F0138
-SSC0.HB
-        SSC0L   [7:0]
+SSC0.H
+        SSC0L.A [7:0]
 &
         SWC0
         SSEC0
@@ -674,41 +673,41 @@ TMR07.H
         CCS07   [12]
         CKS07   [15:14]
 @F01A0
-TSR00.HBR
-        TSR00L  [7:0]
+TSR00.HR
+        TSR00L.A [7:0]
 &
         OVF
-TSR01.HBR
-        TSR01L  [7:0]
+TSR01.HR
+        TSR01L.A [7:0]
 &
         OVF
-TSR02.HBR
-        TSR02L  [7:0]
+TSR02.HR
+        TSR02L.A [7:0]
 &
         OVF
-TSR03.HBR
-        TSR03L  [7:0]
+TSR03.HR
+        TSR03L.A [7:0]
 &
         OVF
-TSR04.HBR
-        TSR04L  [7:0]
+TSR04.HR
+        TSR04L.A [7:0]
 &
         OVF
-TSR05.HBR
-        TSR05L  [7:0]
+TSR05.HR
+        TSR05L.A [7:0]
 &
         OVF
-TSR06.HBR
-        TSR06L  [7:0]
+TSR06.HR
+        TSR06L.A [7:0]
 &
         OVF
-TSR07.HBR
-        TSR07L  [7:0]
+TSR07.HR
+        TSR07L.A [7:0]
 &
         OVF
 @F01B0
-TE0.HBR
-        TE0L    [7:0]
+TE0.HR
+        TE0L.A  [7:0]
 &
         TE00
         TE01
@@ -720,8 +719,8 @@ TE0.HBR
         TE07
         TEH01   [9]
         TEH03   [11]
-TS0.HB
-        TS0L    [7:0]
+TS0.H
+        TS0L.A  [7:0]
 &
         TS00
         TS01
@@ -733,8 +732,8 @@ TS0.HB
         TS07
         TSH01   [9]
         TSH03   [11]
-TT0.HB
-        TT0L    [7:0]
+TT0.H
+        TT0L.A  [7:0]
 &
         TT00
         TT01
@@ -751,8 +750,8 @@ TPS0.H
         PRS01   [7:4]
         PRS02   [9:8]
         PRS03   [13:12]
-TO0.HB
-        TO0L    [7:0]
+TO0.H
+        TO0L.A  [7:0]
 &
         TO00
         TO01
@@ -762,8 +761,8 @@ TO0.HB
         TO05
         TO06
         TO07
-TOE0.HB
-        TOE0L   [7:0]
+TOE0.H
+        TOE0L.A [7:0]
 &
         TOE00
         TOE01
@@ -773,8 +772,8 @@ TOE0.HB
         TOE05
         TOE06
         TOE07
-TOL0.HB
-        TOL0L   [7:0]
+TOL0.H
+        TOL0L.A [7:0]
 &
         TOL01   [1]
         TOL02
@@ -783,8 +782,8 @@ TOL0.HB
         TOL05
         TOL06
         TOL07
-TOM0.HB
-        TOM0L   [7:0]
+TOM0.H
+        TOM0L.A [7:0]
 &
         TOM01   [1]
         TOM02

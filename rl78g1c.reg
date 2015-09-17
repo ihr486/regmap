@@ -1,3 +1,5 @@
+#radix 16
+
 @FFEE0
 VR24.B
 VR25.B
@@ -86,17 +88,17 @@ P14.B
 SDR00.HB
         SDR00L  [7:0]
 &
-        TXD0    [8:0]
+        TXD0    [7:0]
         BAUD00  [15:9]
 &
-        SIO00   [8:0]
+        SIO00   [7:0]
 SDR01.HB
         SDR01L  [7:0]
 &
-        RXD0    [8:0]
+        RXD0    [7:0]
         BAUD01  [15:9]
 &
-        SIO01   [8:0]
+        SIO01   [7:0]
 @FFF18
 TDR00.H
 TDR01.HB

@@ -60,7 +60,7 @@ HOCOCR.B
 OSCOVFSR.B
         MOOVF.R
         PLOVF.R  [2]
-        HCOVF.R  
+        HCOVF.R
 @0008003E
 CKOCR.H
         CKOSEL  [10:8]
@@ -756,19 +756,19 @@ NMIFLTC.B
         NFCLKSEL [1:0]
 
 @00088000
-CMT.CMSTR0.H
+CMT/CMSTR0.H
         STR0
         STR1
-CMT0.CMCR.H
+CMT0/CMCR.H
         CKS     [1:0]
         CMIE    [6]
-CMT0.CMCNT.H
-CMT0.CMCOR.H
-CMT1.CMCR.H
+CMT0/CMCNT.H
+CMT0/CMCOR.H
+CMT1/CMCR.H
         CKS     [1:0]
         CMIE    [6]
-CMT1.CMCNT.H
-CMT1.CMCOR.H
+CMT1/CMCNT.H
+CMT1/CMCOR.H
 
 #module IWDT
 @00088030
@@ -1054,42 +1054,42 @@ SPCMD7.H
         SCKDEN
 
 @00088600
-MTU3.TCR.B
+MTU3/TCR.B
         TPSC    [2:0]
         CKEG    [4:3]
         CCLR    [7:5]
-MTU4.TCR.B
+MTU4/TCR.B
         TPSC    [2:0]
         CKEG    [4:3]
         CCLR    [7:5]
-MTU3.TMDR.B
+MTU3/TMDR.B
         MD      [3:0]
         BFA
         BFB
-MTU4.TMDR.B
+MTU4/TMDR.B
         MD      [3:0]
         BFA
         BFB
-MTU3.TIORH.B
+MTU3/TIORH.B
         IOA     [3:0]
         IOB     [7:4]
-MTU3.TIORL.B
+MTU3/TIORL.B
         IOC     [3:0]
         IOD     [7:4]
-MTU4.TIORH.B
+MTU4/TIORH.B
         IOA     [3:0]
         IOB     [7:4]
-MTU4.TIORL.B
+MTU4/TIORL.B
         IOC     [3:0]
         IOD     [7:4]
-MTU3.TIER.B
+MTU3/TIER.B
         TGIEA
         TGIEB
         TGIEC
         TGIED
         TCIEV
         TTGE    [7]
-MTU4.TIER.B
+MTU4/TIER.B
         TGIEA
         TGIEB
         TGIEC
@@ -1097,7 +1097,7 @@ MTU4.TIER.B
         TCIEV
         TTGE2   [6]
         TTGE
-MTU.TOER.B
+MTU/TOER.B
         OE3B
         OE4A
         OE4B
@@ -1105,7 +1105,7 @@ MTU.TOER.B
         OE4C
         OE4D
 @0008860D
-MTU.TGCR.B
+MTU/TGCR.B
         UF
         VF
         WF
@@ -1113,13 +1113,13 @@ MTU.TGCR.B
         P
         N
         BDC
-MTU.TOCR1.B
+MTU/TOCR1.B
         OLSP
         OLSN
         TOCS
         TOCL
         PSYE    [6]
-MTU.TOCR2.B
+MTU/TOCR2.B
         OLS1P
         OLS1N
         OLS2P
@@ -1127,40 +1127,40 @@ MTU.TOCR2.B
         OLS3P
         OLS3N
         BF      [7:6]
-MTU3.TCNT.H
-MTU4.TCNT.H
-MTU.TCDR.H
-MTU.TDDR.H
-MTU3.TGRA.H
-MTU3.TGRB.H
-MTU4.TGRA.H
-MTU4.TGRB.H
-MTU.TCNTS.H
-MTU.TCBR.H
-MTU3.TGRC.H
-MTU3.TGRD.H
-MTU4.TGRC.H
-MTU4.TGRD.H
-MTU3.TSR.B
+MTU3/TCNT.H
+MTU4/TCNT.H
+MTU/TCDR.H
+MTU/TDDR.H
+MTU3/TGRA.H
+MTU3/TGRB.H
+MTU4/TGRA.H
+MTU4/TGRB.H
+MTU/TCNTS.H
+MTU/TCBR.H
+MTU3/TGRC.H
+MTU3/TGRD.H
+MTU4/TGRC.H
+MTU4/TGRD.H
+MTU3/TSR.B
         TCFD.R   [7]
-MTU4.TSR.B
+MTU4/TSR.B
         TCFD.R   [7]
 @00088630
-MTU.TITCR.B
+MTU/TITCR.B
         T4VCOR  [2:0]
         T4VEN
         T3ACOR  [6:4]
         T3AEN
-MTU.TITCNT.B
+MTU/TITCNT.B
         T4VCNT  [2:0]
         T3ACNT  [6:4]
-MTU.TBTER.B
+MTU/TBTER.B
         BTE     [1:0]
 @00088634
-MTU.TDER.B
+MTU/TDER.B
         TDER
 @00088636
-MTU.TOLBR.B
+MTU/TOLBR.B
         OLS1P
         OLS1N
         OLS2P
@@ -1168,13 +1168,13 @@ MTU.TOLBR.B
         OLS3P
         OLS3N
 @00088638
-MTU3.TBTM.B
+MTU3/TBTM.B
         TTSA
         TTSB
-MTU4.TBTM.B
+MTU4/TBTM.B
         TTSA
         TTSB
-MTU4.TADCR.H
+MTU4/TADCR.H
         ITB4VE
         ITB3AE
         ITA4VE
@@ -1185,58 +1185,58 @@ MTU4.TADCR.H
         UT4AE
         BF      [15:14]
 @00088644
-MTU4.TADCORA.H
-MTU4.TADCORB.H
-MTU4.TADCOBRA.H
-MTU4.TADCOBRB.H
+MTU4/TADCORA.H
+MTU4/TADCORB.H
+MTU4/TADCOBRA.H
+MTU4/TADCOBRB.H
 @00088660
-MTU.TWCR.B
+MTU/TWCR.B
         WRE
         CCE     [7]
 @00088680
-MTU.TSTR.B
+MTU/TSTR.B
         CST0
         CST1
         CST2
         CST3    [6]
         CST4
-MTU.TSYR.B
+MTU/TSYR.B
         SYNC0
         SYNC1
         SYNC2
         SYNC3   [6]
         SYNC4
 @00088684
-MTU.TRWER.B
+MTU/TRWER.B
         RWE
 @00088690
-MTU0.NFCR.B
+MTU0/NFCR.B
         NFAEN
         NFBEN
         NFCEN
         NFDEN
         NFCS    [5:4]
-MTU1.NFCR.B
+MTU1/NFCR.B
         NFAEN
         NFBEN
         NFCS    [5:4]
-MTU2.NFCR.B
+MTU2/NFCR.B
         NFAEN
         NFBEN
         NFCS    [5:4]
-MTU3.NFCR.B
-        NFAEN
-        NFBEN
-        NFCEN
-        NFDEN
-        NFCS    [5:4]
-MTU4.NFCR.B
+MTU3/NFCR.B
         NFAEN
         NFBEN
         NFCEN
         NFDEN
         NFCS    [5:4]
-MTU5.NFCR.B
+MTU4/NFCR.B
+        NFAEN
+        NFBEN
+        NFCEN
+        NFDEN
+        NFCS    [5:4]
+MTU5/NFCR.B
         NFUEN
         NFVEN
         NFWEN
@@ -1937,47 +1937,47 @@ TPRE.B
 TCNT.B
 
 @0008C000
-PORT0.PDR.B
+PORT0/PDR.B
         P03     [3]
         P05     [5]
-PORT1.PDR.B
+PORT1/PDR.B
         P14     [4]
         P15
         P16
         P17
-PORT2.PDR.B
+PORT2/PDR.B
         P26     [6]
         P27
-PORT3.PDR.B
+PORT3/PDR.B
         P30
         P31
         P32
         P35     [5]
-PORT4.PDR.B
+PORT4/PDR.B
         P40
         P41
         P42
         P43
         P44
         P46     [6]
-PORT5.PDR.B
+PORT5/PDR.B
         P54     [4]
         P55
 @0008C00A
-PORTA.PDR.B
+PORTA/PDR.B
         PA0
         PA1
         PA3     [3]
         PA4
         PA6     [6]
-PORTB.PDR.B
+PORTB/PDR.B
         PB0
         PB1
         PB3     [3]
         PB5     [5]
         PB6
         PB7
-PORTC.PDR.B
+PORTC/PDR.B
         PC0
         PC1
         PC2
@@ -1987,7 +1987,7 @@ PORTC.PDR.B
         PC6
         PC7
 @0008C00E
-PORTE.PDR.B
+PORTE/PDR.B
         PE0
         PE1
         PE2
@@ -1997,51 +1997,51 @@ PORTE.PDR.B
         PE6
         PE7
 @0008C012
-PORTJ.PDR.B
+PORTJ/PDR.B
         PJ6     [6]
         PJ7
 @0008C020
-PORT0.PODR.B
+PORT0/PODR.B
         P03     [3]
         P05     [5]
-PORT1.PODR.B
+PORT1/PODR.B
         P14     [4]
         P15
         P16
         P17
-PORT2.PODR.B
+PORT2/PODR.B
         P26     [6]
         P27
-PORT3.PODR.B
+PORT3/PODR.B
         P30
         P31
         P32
         P35     [5]
-PORT4.PODR.B
+PORT4/PODR.B
         P40
         P41
         P42
         P43
         P44
         P46     [6]
-PORT5.PODR.B
+PORT5/PODR.B
         P54     [4]
         P55
 @0008C02A
-PORTA.PODR.B
+PORTA/PODR.B
         PA0
         PA1
         PA3     [3]
         PA4
         PA6     [6]
-PORTB.PODR.B
+PORTB/PODR.B
         PB0
         PB1
         PB3     [3]
         PB5     [5]
         PB6
         PB7
-PORTC.PODR.B
+PORTC/PODR.B
         PC0
         PC1
         PC2
@@ -2051,7 +2051,7 @@ PORTC.PODR.B
         PC6
         PC7
 @0008C02E
-PORTE.PODR.B
+PORTE/PODR.B
         PE0
         PE1
         PE2
@@ -2061,51 +2061,51 @@ PORTE.PODR.B
         PE6
         PE7
 @0008C032
-PORTJ.PODR.B
+PORTJ/PODR.B
         PJ6     [6]
         PJ7
 @0008C040
-PORT0.PIDR.B
+PORT0/PIDR.B
         P03     [3]
         P05     [5]
-PORT1.PIDR.B
+PORT1/PIDR.B
         P14     [4]
         P15
         P16
         P17
-PORT2.PIDR.B
+PORT2/PIDR.B
         P26     [6]
         P27
-PORT3.PIDR.B
+PORT3/PIDR.B
         P30
         P31
         P32
         P35     [5]
-PORT4.PIDR.B
+PORT4/PIDR.B
         P40
         P41
         P42
         P43
         P44
         P46     [6]
-PORT5.PIDR.B
+PORT5/PIDR.B
         P54     [4]
         P55
 @0008C04A
-PORTA.PIDR.B
+PORTA/PIDR.B
         PA0
         PA1
         PA3     [3]
         PA4
         PA6     [6]
-PORTB.PIDR.B
+PORTB/PIDR.B
         PB0
         PB1
         PB3     [3]
         PB5     [5]
         PB6
         PB7
-PORTC.PIDR.B
+PORTC/PIDR.B
         PC0
         PC1
         PC2
@@ -2115,7 +2115,7 @@ PORTC.PIDR.B
         PC6
         PC7
 @0008C04E
-PORTE.PIDR.B
+PORTE/PIDR.B
         PE0
         PE1
         PE2
@@ -2125,53 +2125,53 @@ PORTE.PIDR.B
         PE6
         PE7
 @0008C051
-PORTH.PIDR.B
+PORTH/PIDR.B
         PH7     [7]
-PORTJ.PIDR.B
+PORTJ/PIDR.B
         PJ6     [6]
         PJ7
 @0008C060
-PORT0.PMR.B
+PORT0/PMR.B
         P03     [3]
         P05     [5]
-PORT1.PMR.B
+PORT1/PMR.B
         P14     [4]
         P15
         P16
         P17
-PORT2.PMR.B
+PORT2/PMR.B
         P26     [6]
         P27
-PORT3.PMR.B
+PORT3/PMR.B
         P30
         P31
         P32
         P35     [5]
-PORT4.PMR.B
+PORT4/PMR.B
         P40
         P41
         P42
         P43
         P44
         P46     [6]
-PORT5.PMR.B
+PORT5/PMR.B
         P54     [4]
         P55
 @0008C06A
-PORTA.PMR.B
+PORTA/PMR.B
         PA0
         PA1
         PA3     [3]
         PA4
         PA6     [6]
-PORTB.PMR.B
+PORTB/PMR.B
         PB0
         PB1
         PB3     [3]
         PB5     [5]
         PB6
         PB7
-PORTC.PMR.B
+PORTC/PMR.B
         PC0
         PC1
         PC2
@@ -2181,7 +2181,7 @@ PORTC.PMR.B
         PC6
         PC7
 @0008C06E
-PORTE.PMR.B
+PORTE/PMR.B
         PE0
         PE1
         PE2
@@ -2191,98 +2191,98 @@ PORTE.PMR.B
         PE6
         PE7
 @0008C071
-PORTH.PMR.B
+PORTH/PMR.B
         PH7     [7]
-PORTJ.PMR.B
+PORTJ/PMR.B
         PJ6     [6]
         PJ7
 @0008C083
-PORT1.ODR1.B
+PORT1/ODR1.B
         P14     [1:0]
         P15
         P16     [4]
         P17     [6]
 @0008C085
-PORT2.ODR1.B
+PORT2/ODR1.B
         P26     [4]
         P27     [6]
-PORT3.ODR0.B
+PORT3/ODR0.B
         P30
         P31     [2]
         P32     [4]
 @0008C094
-PORTA.ODR0.B
+PORTA/ODR0.B
         PA0
         PA1     [2]
         PA3     [6]
-PORTA.ODR1.B
+PORTA/ODR1.B
         PA4
         PA6     [4]
-PORTB.ODR0.B
+PORTB/ODR0.B
         PB0
         PB1     [2]
         PB3     [6]
-PORTB.ODR1.B
+PORTB/ODR1.B
         PB5     [2]
         PB6     [4]
         PB7     [6]
-PORTC.ODR0.B
+PORTC/ODR0.B
         PC0
         PC1     [2]
         PC2     [4]
         PC3     [6]
-PORTC.ODR1.B
+PORTC/ODR1.B
         PC4
         PC5     [2]
         PC6     [4]
         PC7     [6]
 @0008C09C
-PORTE.ODR0.B
+PORTE/ODR0.B
         PE0
         PE1     [3:2]
         PE2
         PE3     [6]
-PORTE.ODR1.B
+PORTE/ODR1.B
         PE4
         PE5     [2]
         PE6     [4]
         PE7     [6]
 @0008C0C0
-PORT0.PCR.B
+PORT0/PCR.B
         P03     [3]
         P05     [5]
-PORT1.PCR.B
+PORT1/PCR.B
         P14     [4]
         P15
         P16
         P17
-PORT2.PCR.B
+PORT2/PCR.B
         P26     [6]
         P27
-PORT3.PCR.B
+PORT3/PCR.B
         P30
         P31
         P32
         P35     [5]
 @0008C0C5
-PORT5.PCR.B
+PORT5/PCR.B
         P54     [4]
         P55
 @0008C0CA
-PORTA.PCR.B
+PORTA/PCR.B
         PA0
         PA1
         PA3     [3]
         PA4
         PA6     [6]
-PORTB.PCR.B
+PORTB/PCR.B
         PB0
         PB1
         PB3     [3]
         PB5     [5]
         PB6
         PB7
-PORTC.PCR.B
+PORTC/PCR.B
         PC0
         PC1
         PC2
@@ -2292,7 +2292,7 @@ PORTC.PCR.B
         PC6
         PC7
 @0008C0CE
-PORTE.PCR.B
+PORTE/PCR.B
         PE0
         PE1
         PE2
@@ -2302,15 +2302,15 @@ PORTE.PCR.B
         PE6
         PE7
 @0008C11F
-MPC.PWPR.B
+MPC/PWPR.B
         PFSWE   [6]
         B0WI
-PORT.PSRB.B
+PORT/PSRB.B
         PSEL0
         PSEL1
         PSEL3   [3]
         PSEL5   [5]
-PORT.PSRA.B
+PORT/PSRA.B
         PSEL6   [6]
         PSEL7
 

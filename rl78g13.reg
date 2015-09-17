@@ -1,3 +1,5 @@
+#radix 16
+
 @F0010
 ADM2.B
         ADTYP
@@ -6,9 +8,9 @@ ADM2.B
         ADREFM  [5]
         ADREF   [7:6]
 ADUL.B
-        ADUL	[7:0]
+        ADUL    [7:0]
 ADLL.B
-        ADLL	[7:0]
+        ADLL    [7:0]
 ADTES.B
         ADTES   [1:0]
 @F0030
@@ -303,14 +305,14 @@ RPECTL.B
 BCDADJ.B
 @F0100
 SSR00.HB
-        SSR00L	[7:0]
+        SSR00L  [7:0]
 &
         OVF00
         PEF00
         BFF00   [5]
         TSF00
 SSR01.HB
-        SSR01L	[7:0]
+        SSR01L  [7:0]
 &
         OVF01
         PEF01
@@ -318,14 +320,14 @@ SSR01.HB
         BFF01   [5]
         TSF01
 SSR02.HB
-        SSR02L	[7:0]
+        SSR02L  [7:0]
 &
         OVF02
         PEF02
         BFF02   [5]
         TSF02
 SSR03.HB
-        SSR03L	[7:0]
+        SSR03L  [7:0]
 &
         OVF03
         PEF03
@@ -333,25 +335,25 @@ SSR03.HB
         BFF03   [5]
         TSF03
 SIR00.HB
-        SIR00L	[7:0]
+        SIR00L  [7:0]
 &
         OVCT00
         PECT00
         FECT00
 SIR01.HB
-        SIR01L	[7:0]
+        SIR01L  [7:0]
 &
         OVCT01
         PECT01
         FECT01
 SIR02.HB
-        SIR02L	[7:0]
+        SIR02L  [7:0]
 &
         OVCT02
         PECT02
         FECT02
 SIR03.HB
-        SIR03L	[7:0]
+        SIR03L  [7:0]
 &
         OVCT03
         PECT03
@@ -417,28 +419,28 @@ SCR03.H
         RXE03
         TXE03
 SE0.HB
-        SE0L	[7:0]
+        SE0L    [7:0]
 &
         SE00
         SE01
         SE02
         SE03
 SS0.HB
-        SS0L	[7:0]
+        SS0L    [7:0]
 &
         SS00
         SS01
         SS02
         SS03
 ST0.HB
-        ST0L	[7:0]
+        ST0L    [7:0]
 &
         ST00
         ST01
         ST02
         ST03
 SPS0.HB
-        SPS0L	[7:0]
+        SPS0L   [7:0]
 &
         PRS00   [3:0]
         PRS01   [7:4]
@@ -452,7 +454,7 @@ SO0.H
         CKO02
         CKO03
 SOE0.HB
-        SOE0L	[7:0]
+        SOE0L   [7:0]
 &
         SOE00
         SOE01
@@ -460,26 +462,26 @@ SOE0.HB
         SOE03
 @F0134
 SOL0.HB
-        SOL0L	[7:0]
+        SOL0L   [7:0]
 &
         SOL00
         SOL02   [2]
 @F0138
 SSC0.HB
-        SSC0L	[7:0]
+        SSC0L   [7:0]
 &
         SWC0
         SSEC0
 @F0140
 SSR10.HB
-        SSR10L	[7:0]
+        SSR10L  [7:0]
 &
         OVF10
         PEF10
         BFF10   [5]
         TSF10
 SSR11.HB
-        SSR11L	[7:0]
+        SSR11L  [7:0]
 &
         OVF11
         PEF11
@@ -487,14 +489,14 @@ SSR11.HB
         BFF11   [5]
         TSF11
 SSR12.HB
-        SSR12L	[7:0]
+        SSR12L  [7:0]
 &
         OVF12
         PEF12
         BFF12   [5]
         TSF12
 SSR13.HB
-        SSR13L	[7:0]
+        SSR13L  [7:0]
 &
         OVF13
         PEF13
@@ -502,23 +504,23 @@ SSR13.HB
         BFF13   [5]
         TSF13
 SIR10.HB
-        SIR10L	[7:0]
+        SIR10L  [7:0]
 &
         OVCT10
         PECT10
 SIR11.HB
-        SIR11L	[7:0]
+        SIR11L  [7:0]
 &
         OVCT11
         PECT11
         FECT11
 SIR12.HB
-        SIR12L	[7:0]
+        SIR12L  [7:0]
 &
         OVCT12
         PECT12
 SIR13.HB
-        SIR13L	[7:0]
+        SIR13L  [7:0]
 &
         OVCT13
         PECT13
@@ -584,28 +586,28 @@ SCR13.H
         RXE13
         TXE13
 SE1.HB
-        SE1L	[7:0]
+        SE1L    [7:0]
 &
         SE10
         SE11
         SE12
         SE13
 SS1.HB
-        SS1L	[7:0]
+        SS1L    [7:0]
 &
         SS10
         SS11
         SS12
         SS13
 ST1.HB
-        ST1L	[7:0]
+        ST1L    [7:0]
 &
         ST10
         ST11
         ST12
         ST13
 SPS1.HB
-        SPS1L	[7:0]
+        SPS1L   [7:0]
 &
         PRS10   [3:0]
         PRS11   [7:4]
@@ -619,7 +621,7 @@ SO1.H
         CKO12
         CKO13
 SOE1.HB
-        SOE1L	[7:0]
+        SOE1L   [7:0]
 &
         SOE10
         SOE11
@@ -627,13 +629,13 @@ SOE1.HB
         SOE13
 @F0174
 SOL1.HB
-        SOL1L	[7:0]
+        SOL1L   [7:0]
 &
         SOL10
         SOL12   [2]
 @F0178
 SSC1.HB
-        SSC1L	[7:0]
+        SSC1L   [7:0]
 &
         SWC1
         SSEC1
@@ -700,39 +702,39 @@ TMR07.H
         CCS07   [12]
         CKS07   [15:14]
 TSR00.HB
-        TSR00L	[7:0]
+        TSR00L  [7:0]
 &
         OVF
 TSR01.HB
-        TSR01L	[7:0]
+        TSR01L  [7:0]
 &
         OVF
 TSR02.HB
-        TSR02L	[7:0]
+        TSR02L  [7:0]
 &
         OVF
 TSR03.HB
-        TSR03L	[7:0]
+        TSR03L  [7:0]
 &
         OVF
 TSR04.HB
-        TSR04L	[7:0]
+        TSR04L  [7:0]
 &
         OVF
 TSR05.HB
-        TSR05L	[7:0]
+        TSR05L  [7:0]
 &
         OVF
 TSR06.HB
-        TSR06L	[7:0]
+        TSR06L  [7:0]
 &
         OVF
 TSR07.HB
-        TSR07L	[7:0]
+        TSR07L  [7:0]
 &
         OVF
-TE0.HB
-        TE0L	[7:0]
+TE0.H
+        TE0L.A  [7:0]
 &
         TE00
         TE01
@@ -744,8 +746,8 @@ TE0.HB
         TE07
         TEH01   [9]
         TEH03   [11]
-TS0.HB
-        TS0L	[7:0]
+TS0.H
+        TS0L.A  [7:0]
 &
         TS00
         TS01
@@ -757,8 +759,8 @@ TS0.HB
         TS07
         TSH01   [9]
         TSH03   [11]
-TT0.HB
-        TT0L	[7:0]
+TT0.H
+        TT0L.A  [7:0]
 &
         TT00
         TT01
@@ -770,13 +772,13 @@ TT0.HB
         TT07
         TTH01   [9]
         TTH03   [11]
-TPS0.HB
+TPS0.H
         PRS00   [3:0]
         PRS01   [7:4]
         PRS02   [9:8]
         PRS03   [13:12]
 TO0.HB
-        TO0L	[7:0]
+        TO0L    [7:0]
 &
         TO00
         TO01
@@ -787,7 +789,7 @@ TO0.HB
         TO06
         TO07
 TOE0.HB
-        TOE0L	[7:0]
+        TOE0L   [7:0]
 &
         TOE00
         TOE01
@@ -798,7 +800,7 @@ TOE0.HB
         TOE06
         TOE07
 TOL0.HB
-        TOL0L	[7:0]
+        TOL0L   [7:0]
 &
         TOL01   [1]
         TOL02
@@ -808,7 +810,7 @@ TOL0.HB
         TOL06
         TOL07
 TOM0.HB
-        TOM0L	[7:0]
+        TOM0L   [7:0]
 &
         TOM01   [1]
         TOM02
@@ -879,39 +881,39 @@ TMR17.H
         CCS17   [12]
         CKS17   [15:14]
 TSR10.HB
-        TSR10L	[7:0]
+        TSR10L  [7:0]
 &
         OVF
 TSR11.HB
-        TSR11L	[7:0]
+        TSR11L  [7:0]
 &
         OVF
 TSR12.HB
-        TSR12L	[7:0]
+        TSR12L  [7:0]
 &
         OVF
 TSR13.HB
-        TSR13L	[7:0]
+        TSR13L  [7:0]
 &
         OVF
 TSR14.HB
-        TSR14L	[7:0]
+        TSR14L  [7:0]
 &
         OVF
 TSR15.HB
-        TSR15L	[7:0]
+        TSR15L  [7:0]
 &
         OVF
 TSR16.HB
-        TSR16L	[7:0]
+        TSR16L  [7:0]
 &
         OVF
 TSR17.HB
-        TSR17L	[7:0]
+        TSR17L  [7:0]
 &
         OVF
-TE1.HB
-        TE1L	[7:0]
+TE1.H
+        TE1L.A  [7:0]
 &
         TE10
         TE11
@@ -923,8 +925,8 @@ TE1.HB
         TE17
         TEH11   [9]
         TEH13   [11]
-TS1.HB
-        TS1L	[7:0]
+TS1.H
+        TS1L.A  [7:0]
 &
         TS10
         TS11
@@ -936,8 +938,8 @@ TS1.HB
         TS17
         TSH11   [9]
         TSH13   [11]
-TT1.HB
-        TT1L	[7:0]
+TT1.H
+        TT1L.A  [7:0]
 &
         TT10
         TT11
@@ -955,7 +957,7 @@ TPS1.H
         PRS12   [9:8]
         PRS13   [13:12]
 TO1.HB
-        TO1L	[7:0]
+        TO1L    [7:0]
 &
         TO10
         TO11
@@ -966,7 +968,7 @@ TO1.HB
         TO16
         TO17
 TOE1.HB
-        TOE1L	[7:0]
+        TOE1L   [7:0]
 &
         TOE10
         TOE11
@@ -977,7 +979,7 @@ TOE1.HB
         TOE16
         TOE17
 TOL1.HB
-        TOL1L	[7:0]
+        TOL1L   [7:0]
 &
         TOL11   [1]
         TOL12
@@ -987,7 +989,7 @@ TOL1.HB
         TOL16
         TOL17
 TOM1.HB
-        TOM1L	[7:0]
+        TOM1L   [7:0]
 &
         TOM11   [1]
         TOM12
@@ -999,17 +1001,17 @@ TOM1.HB
 DSA2.B
 DSA3.B
 DRA2.HB
-        DRA2L	[7:0]
-        DRA2H	[15:8]
+        DRA2L   [7:0]
+        DRA2H   [15:8]
 DRA3.HB
-        DRA3L	[7:0]
-        DRA3H	[15:8]
+        DRA3L   [7:0]
+        DRA3H   [15:8]
 DBC2.HB
-        DBC2L	[7:0]
-        DBC2H	[15:8]
+        DBC2L   [7:0]
+        DBC2H   [15:8]
 DBC3.HB
-        DBC3L	[7:0]
-        DBC3H	[15:8]
+        DBC3L   [7:0]
+        DBC3H   [15:8]
 DMC2.B
         IFC2    [3:0]
         DWAIT2
@@ -1253,22 +1255,22 @@ SDR00.HB
 SDR01.HB
         RXD0    [7:0]
 &
-        SIO01	[7:0]
+        SIO01   [7:0]
 SDR12.HB
-        TXD3	[7:0]
+        TXD3    [7:0]
 &
-        SIO30	[7:0]
+        SIO30   [7:0]
 SDR13.HB
-        RXD3	[7:0]
+        RXD3    [7:0]
 &
-        SIO31	[7:0]
+        SIO31   [7:0]
 TDR00.H
 TDR01.HB
-        TDR01L	[7:0]
-        TDR01H	[15:8]
+        TDR01L  [7:0]
+        TDR01H  [15:8]
 @FFF1E
 ADCR.HB
-        ADCRH	[15:8]
+        ADCRH   [15:8]
 PM0.B
         PM00
         PM01
@@ -1452,21 +1454,21 @@ EGN1.B
         EGN11
 @FFF44
 SDR02.HB
-        TXD1	[7:0]
+        TXD1    [7:0]
 &
-        SIO10	[7:0]
+        SIO10   [7:0]
 SDR03.HB
-        RXD1	[7:0]
+        RXD1    [7:0]
 &
-        SIO11	[7:0]
+        SIO11   [7:0]
 SDR10.HB
-        TXD2	[7:0]
+        TXD2    [7:0]
 &
-        SIO20	[7:0]
+        SIO20   [7:0]
 SDR11.HB
-        RXD2	[7:0]
+        RXD2    [7:0]
 &
-        SIO21	[7:0]
+        SIO21   [7:0]
 @FFF50
 IICA0.B
 IICS0.B
@@ -1502,20 +1504,20 @@ IICF1.B
 @FFF64
 TDR02.H
 TDR03.HB
-        TDR03L	[7:0]
-        TDR03H	[15:8]
+        TDR03L  [7:0]
+        TDR03H  [15:8]
 TDR04.H
 TDR05.H
 TDR06.H
 TDR07.H
 TDR10.H
 TDR11.HB
-        TDR11L	[7:0]
-        TDR11H	[15:8]
+        TDR11L  [7:0]
+        TDR11H  [15:8]
 TDR12.H
 TDR13.HB
-        TDR13L	[7:0]
-        TDR13H	[15:8]
+        TDR13L  [7:0]
+        TDR13H  [15:8]
 TDR14.H
 TDR15.H
 TDR16.H
@@ -1580,7 +1582,7 @@ CSC.B
         XTSTOP  [6]
         MSTOP
 OSTC.B
-        MOST	[7:0]
+        MOST    [7:0]
 OSTS.B
         OSTS    [2:0]
 CKC.B
@@ -1616,17 +1618,17 @@ CRCIN.B
 DSA0.B
 DSA1.B
 DRA0.HB
-        DRA0L	[7:0]
-        DRA0H	[15:8]
+        DRA0L   [7:0]
+        DRA0H   [15:8]
 DRA1.HB
-        DRA1L	[7:0]
-        DRA1H	[15:8]
+        DRA1L   [7:0]
+        DRA1H   [15:8]
 DBC0.HB
-        DBC0L	[7:0]
-        DBC0H	[15:8]
+        DBC0L   [7:0]
+        DBC0H   [15:8]
 DBC1.HB
-        DBC1L	[7:0]
-        DBC1H	[15:8]
+        DBC1L   [7:0]
+        DBC1H   [15:8]
 DMC0.B
         IFC0    [3:0]
         DWAIT0
@@ -1647,8 +1649,8 @@ DRC1.B
         DEN1    [7]
 @FFFD0
 IF2.HB
-        IF2L	[7:0]
-        IF2H	[15:8]
+        IF2L    [7:0]
+        IF2H    [15:8]
 &
         TMIF05
         TMIF06
@@ -1669,7 +1671,7 @@ IF2.HB
 &
         TMIF13H [12]
 IF3.HB
-        IF3L	[7:0]
+        IF3L    [7:0]
 &
         DMAIF2
         DMAIF3
@@ -1679,8 +1681,8 @@ IF3.HB
         TMIF17
 @FFFD4
 MK2.HB
-        MK2L	[7:0]
-        MK2H	[15:8]
+        MK2L    [7:0]
+        MK2H    [15:8]
 &
         TMMK05
         TMMK06
@@ -1701,7 +1703,7 @@ MK2.HB
 &
         TMMK13H [12]
 MK3.HB
-        MK3L	[7:0]
+        MK3L    [7:0]
 &
         DMAMK2
         DMAMK3
@@ -1711,8 +1713,8 @@ MK3.HB
         TMMK17
 @FFFD8
 PR02.HB
-        PR02L	[7:0]
-        PR02H	[15:8]
+        PR02L   [7:0]
+        PR02H   [15:8]
 &
         TMPR005
         TMPR006
@@ -1733,7 +1735,7 @@ PR02.HB
 &
         TMPR013H [12]
 PR03.HB
-        PR03L	[7:0]
+        PR03L   [7:0]
 &
         DMAPR02
         DMAPR03
@@ -1743,8 +1745,8 @@ PR03.HB
         TMPR017
 @FFFDC
 PR12.HB
-        PR12L	[7:0]
-        PR12H	[15:8]
+        PR12L   [7:0]
+        PR12H   [15:8]
 &
         TMPR105
         TMPR106
@@ -1765,7 +1767,7 @@ PR12.HB
 &
         TMPR113H [12]
 PR13.HB
-        PR13L	[7:0]
+        PR13L   [7:0]
 &
         DMAPR12
         DMAPR13
@@ -1775,8 +1777,8 @@ PR13.HB
         TMPR117
 @FFFE0
 IF0.HB
-        IF0L	[7:0]
-        IF0H	[15:8]
+        IF0L    [7:0]
+        IF0H    [15:8]
 &
         WDTIIF
         LVIIF
@@ -1807,8 +1809,8 @@ IF0.HB
         IICIF00 [13]
         IICIF01
 IF1.HB
-        IF1L	[7:0]
-        IF1H	[15:8]
+        IF1L    [7:0]
+        IF1H    [15:8]
 &
         STIF1
         SRIF1
@@ -1838,8 +1840,8 @@ IF1.HB
         IICIF30 [12]
         IICIF31
 MK0.HB
-        MK0L	[7:0]
-        MK0H	[15:8]
+        MK0L    [7:0]
+        MK0H    [15:8]
 &
         WDTIMK
         LVIMK
@@ -1870,8 +1872,8 @@ MK0.HB
         IICMK00 [13]
         IICMK01
 MK1.HB
-        MK1L	[7:0]
-        MK1H	[15:8]
+        MK1L    [7:0]
+        MK1H    [15:8]
 &
         STMK1
         SRMK1
@@ -1901,8 +1903,8 @@ MK1.HB
         IICMK30 [12]
         IICMK31
 PR00.HB
-        PR00L	[7:0]
-        PR00H	[15:8]
+        PR00L   [7:0]
+        PR00H   [15:8]
 &
         WDTIPR0
         LVIPR0
@@ -1933,8 +1935,8 @@ PR00.HB
         IICPR000 [13]
         IICPR001
 PR01.HB
-        PR01L	[7:0]
-        PR01H	[15:8]
+        PR01L   [7:0]
+        PR01H   [15:8]
 &
         STPR01
         SRPR01
@@ -1964,8 +1966,8 @@ PR01.HB
         IICPR030 [12]
         IICPR031
 PR10.HB
-        PR10L	[7:0]
-        PR10H	[15:8]
+        PR10L   [7:0]
+        PR10H   [15:8]
 &
         WDTIPR1
         LVIPR1
@@ -1996,8 +1998,8 @@ PR10.HB
         IICPR100 [13]
         IICPR101
 PR11.HB
-        PR11L	[7:0]
-        PR11H	[15:8]
+        PR11L   [7:0]
+        PR11H   [15:8]
 &
         STPR11
         SRPR11
