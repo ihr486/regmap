@@ -56,52 +56,50 @@ class Register:
         if field.start % 8 == 0 and field.end % 8 == 7:
             subunit_size = (field.end - field.start + 1) / 8
             if (field.start / 8) % subunit_size == 0:
-                if subunit_size == 1 and self.atom == 1:
-                    self.atom_list[field.start / 8] = 1
-                elif subunit_size == 2 and self.atom == 2:
-                    self.atom_list[field.start / 8] = 2
-                    self.atom_list[field.start / 8 + 1] = 2
-                elif subunit_size == 4 and self.atom == 4:
-                    self.atom_list[field.start / 8] = 4
-                    self.atom_list[field.start / 8 + 1] = 4
-                    self.atom_list[field.start / 8 + 2] = 4
-                    self.atom_list[field.start / 8 + 3] = 4
+                if subunit_size == self.atom or (field.attr and field.attr.find("A") >= 0):
+                    for i in range(field.start / 8, field.end / 8 + 1):
+                        self.atom_list[i] = subunit_size
 
     def addLayer(self):
         self.layer_list.append([])
 
-    def printCHeader(self, out):
+    def printCHeader(self, prefix, out):
         for layer in self.layer_list:
             if len(layer) == 0:
                 continue
 
-            print("\t\tstruct {", file = out)
+            print("{0}\tstruct {{".format(prefix), file = out)
 
             bit_position = 0
 
             for field in layer:
+                if field.attr and field.attr.find("R") >= 0:
+                    modifier = "const "
+                else:
+                    modifier = ""
+
                 if field.start < 0:
-                    print("\t\t\t{0} {1} : 1;".format(type_names[self.atom_list[bit_position / 8]], field.name), file = out)
+                    print("{0}\t\t{1}{2} {3} : 1;".format(prefix, modifier, type_names[self.atom_list[bit_position / 8]], field.name), file = out)
 
                     bit_position += 1
                 else:
                     if bit_position < field.start:
                         max_atom = max(self.atom_list[bit_position / 8 : (field.start - 1) / 8 + 1])
 
-                        print("\t\t\t{0} : {1};".format(type_names[max_atom], field.start - bit_position), file = out)
+                        print("{0}\t\t{1} : {2};".format(prefix, type_names[max_atom], field.start - bit_position), file = out)
 
                     if field.end < 0:
-                        print("\t\t\t{0} {1} : 1;".format(type_names[self.atom_list[bit_position / 8]], field.name), file = out)
+                        print("{0}\t\t{1}{2} {3} : 1;".format(prefix, modifier, type_names[self.atom_list[bit_position / 8]], field.name), file = out)
 
                         bit_position = field.start + 1
                     else:
                         max_atom = max(self.atom_list[field.start / 8 : field.end / 8 + 1])
 
-                        print("\t\t\t{0} {1} : {2};".format(type_names[max_atom], field.name, field.end - field.start + 1), file = out)
+                        print("{0}\t\t{1}{2} {3} : {4};".format(prefix, modifier, type_names[max_atom], field.name, field.end - field.start + 1), file = out)
 
                         bit_position = field.end + 1
 
-            print("\t\t};", file = out)
+            print("{0}\t}};".format(prefix), file = out)
 
 class Module:
     def __init__(self, name):
@@ -117,6 +115,9 @@ class Module:
 
         if len(self.name) > 0:
             print("extern volatile struct {", file = out)
+            prefix = "\t"
+        else:
+            prefix = ""
 
         self.register_list.sort(key = attrgetter("address"))
 
@@ -126,15 +127,25 @@ class Module:
         for register in self.register_list:
             padding = register.address - address
 
-            if padding > 0:
-                print("\tuint8_t spacer{0:d}[{1:d}];".format(spacer_count, padding), file = out)
+            if len(self.name) > 0:
+                if padding > 0:
+                    print("\tuint8_t spacer{0:d}[{1:d}];".format(spacer_count, padding), file = out)
 
-            print("\tunion {", file = out)
-            print("\t\t{0};".format(union_base[register.size]), file = out)
+                if register.attr and register.attr.find("R") >= 0:
+                    print("\tconst union {", file = out)
+                else:
+                    print("\tunion {", file = out)
+            else:
+                if register.attr and register.attr.find("R") >= 0:
+                    print("extern const volatile union {", file = out)
+                else:
+                    print("extern volatile union {", file = out)
 
-            register.printCHeader(out)
+            print("{0}\t{1};".format(prefix, union_base[register.size]), file = out)
 
-            print("\t}} {0};".format(register.name), file = out)
+            register.printCHeader(prefix, out)
+
+            print("{0}}} {1};".format(prefix, register.name), file = out)
 
             spacer_count += 1
             address = register.address + register.size
@@ -143,10 +154,27 @@ class Module:
             print("}} {0};".format(self.name), file = out)
 
     def printASMHeader(self, out):
-        pass
+        for register in self.register_list:
+            if len(self.name) == 0:
+                print("\t.set\t{0}, 0x{1:X}".format(register.name, register.address), file = out)
+            else:
+                print("\t.set\t{0}_{1}, 0x{2:X}".format(self.name, register.name, register.address), file = out)
 
     def printSymResolver(self, out):
-        pass
+        if len(self.register_list) == 0:
+            return
+
+        if len(self.name) == 0:
+            for register in self.register_list:
+                print("\t.global\t{0}".format(register.name), file = out)
+                print("\t.set\t{0}, 0x{1:X}".format(register.name, register.address), file = out)
+        else:
+            self.register_list.sort(key = attrgetter("address"))
+
+            base_address = self.register_list[0].address / 4 * 4
+
+            print("\t.global\t{0}".format(self.name), file = out)
+            print("\t.set\t{0}, 0x{1:X}".format(self.name, base_address), file = out)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
